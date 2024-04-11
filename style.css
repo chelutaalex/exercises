@@ -1,0 +1,17 @@
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-group_label{
+    display: block;
+}
+
+.button{
+    background-color: black;
+    color: white;
+}
+
+.box-form{
+    display: flex;
+    justify-content: center;
+}
