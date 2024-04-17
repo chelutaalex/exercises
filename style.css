@@ -48,3 +48,7 @@
 a:hover {
     color: blue;
 }
+
+li:last-child {
+    color: red;
+}
