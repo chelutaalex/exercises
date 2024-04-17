@@ -44,3 +44,7 @@
     border-style: solid;
     border-color: black;
 }
+
+a:hover {
+    color: blue;
+}
