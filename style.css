@@ -77,3 +77,7 @@ a:hover {
 #hexcolor {
     color: #ff0000;
 }
+
+#rgbacolor {
+    color: rgba(255,0,0,70%);
+}
