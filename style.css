@@ -65,6 +65,7 @@ a:hover {
     color: violet;
 }
 
-p {
-    color: brown;
+.ereditarieta {
+    color: violet;
+    text-align: center;
 }
