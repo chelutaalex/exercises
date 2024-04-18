@@ -91,3 +91,15 @@ a:hover {
     width: 100px;
     background-color: sandybrown;
 }
+
+.emrem {
+    font-size: 10px;
+}
+
+#prem {
+    font-size: 7rem;
+}
+
+#pem {
+    font-size: 7em;
+}
