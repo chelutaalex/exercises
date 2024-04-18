@@ -85,3 +85,14 @@ a:hover {
 #colorname {
     color: red;
 }
+
+.quadrato {
+    height: 100px;
+    width: 100px;
+}
+
+.quadrato_1 {
+    height: 50%;
+    width: 50%;
+    background-color: black;
+}
