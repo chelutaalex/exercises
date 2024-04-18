@@ -69,3 +69,7 @@ a:hover {
     color: violet;
     text-align: center;
 }
+
+#rgbcolor {
+    color: rgb(255, 0, 0);
+}
