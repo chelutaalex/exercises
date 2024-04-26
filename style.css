@@ -118,3 +118,22 @@ a:hover {
 .list li {
     display: inline-block;
 }
+
+.spantest span{
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    background-color: transparent;
+}
+
+.spantest span:first-child {
+    display: inline;
+}
+
+.spantest span:nth-child(2) {
+    display: inline-block;
+}
+
+.spantest span:nth-child(3) {
+    display: block;
+}
