@@ -114,3 +114,7 @@ a:hover {
 #pem {
     font-size: 7em;
 }
+
+.list li {
+    display: inline-block;
+}
