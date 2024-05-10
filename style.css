@@ -143,3 +143,7 @@ a:hover {
 .img1 {
     float: right;
 }
+
+#secondo-paragrafo {
+    clear: both;
+}
