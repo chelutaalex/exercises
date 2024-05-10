@@ -17,7 +17,7 @@
     border: black;
     border-width: thin;
     border-style: solid;
-    display:;
+    display: none;
 }
 
 .titles .titles_1 {
@@ -154,6 +154,7 @@ a:hover {
 }
 
 .navbar {
+    width: 100%;
     display: flex;
     position: fixed;
 }
