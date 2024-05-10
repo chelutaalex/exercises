@@ -152,3 +152,18 @@ a:hover {
     display: flex;
     flex-direction: row;
 }
+
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.navbar-ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin-left: auto;
+    margin-bottom: 0;
+}
