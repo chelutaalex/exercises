@@ -17,6 +17,7 @@
     border: black;
     border-width: thin;
     border-style: solid;
+    display:;
 }
 
 .titles .titles_1 {
@@ -137,4 +138,8 @@ a:hover {
 
 .spantest span:nth-child(3) {
     display: block;
+}
+
+.img1 {
+    float: right;
 }
