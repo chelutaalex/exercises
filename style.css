@@ -155,9 +155,7 @@ a:hover {
 
 .navbar {
     display: flex;
-    position: sticky;
-    top: 0;
-    left: 0;
+    position: fixed;
 }
 
 .navbar-ul {
