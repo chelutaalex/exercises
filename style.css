@@ -191,13 +191,13 @@ body {
 }
 
 .flex1 {
-    flex-grow: 1;
+    flex-shrink: 0.5;
 }
 
 .flex2 {
-    flex-grow: 1;
+    
 }
 
 .flex3 {
-    flex-grow: 3;
+    
 }
