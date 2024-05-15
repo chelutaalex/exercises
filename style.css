@@ -170,3 +170,12 @@ a:hover {
     margin-left: auto;
     margin-bottom: 0;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+}
