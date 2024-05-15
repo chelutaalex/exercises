@@ -20,6 +20,8 @@
     display: none;
 }
 
+
+
 .titles .titles_1 {
     color: aqua;
 }
@@ -157,6 +159,8 @@ a:hover {
     width: 100%;
     display: flex;
     position: fixed;
+    left: 0;
+    top: 0;
 }
 
 .navbar-ul {
