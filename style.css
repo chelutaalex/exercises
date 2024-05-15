@@ -189,3 +189,15 @@ body {
     flex-wrap: nowrap;
     justify-content: center;
 }
+
+.flex1 {
+    flex-grow: 1;
+}
+
+.flex2 {
+    flex-grow: 1;
+}
+
+.flex3 {
+    flex-grow: 3;
+}
