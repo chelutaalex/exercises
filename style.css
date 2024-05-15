@@ -105,6 +105,9 @@ a:hover {
     height: 100px;
     width: 100px;
     background-color: sandybrown;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 .emrem {
