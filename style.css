@@ -182,3 +182,7 @@ body {
 .footer {
     margin-top: auto;
 }
+
+.flexbox {
+    display: flex;
+}
