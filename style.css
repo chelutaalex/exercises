@@ -191,11 +191,11 @@ body {
 }
 
 .flex1 {
-    flex-shrink: 0.5;
+    
 }
 
 .flex2 {
-    
+    flex-basis: 100px;
 }
 
 .flex3 {
