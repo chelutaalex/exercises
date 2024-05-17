@@ -216,3 +216,7 @@ body {
 .ottoenove {
     grid-column: 2 / span 2;
 }
+
+.unoequattro {
+    grid-row: 1 / span 2;
+}
