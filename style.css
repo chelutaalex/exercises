@@ -206,7 +206,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template: auto auto / auto auto auto auto auto ;
+    grid-template: auto 100px / auto auto auto auto auto ;
 }
 
 .grid-container > div {
