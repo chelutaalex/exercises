@@ -206,10 +206,16 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template: auto 100px / auto auto auto auto auto ;
+    grid-template: auto auto auto auto / auto auto auto auto;
+    gap: 10px;
 }
 
 .grid-container > div {
     border: 1px solid black;
     text-align: center;
+}
+
+.equal {
+    grid-column: 4;
+    grid-row: 3 / span 2;
 }
