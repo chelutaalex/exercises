@@ -212,3 +212,7 @@ body {
 .grid-container > div {
     border: 1px solid black;
 }
+
+.ottoenove {
+    grid-column: 2 / span 2;
+}
