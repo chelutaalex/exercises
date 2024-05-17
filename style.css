@@ -246,3 +246,10 @@ body {
     left: 95%;
     top: 50px;
   }
+
+  .fullscreen {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: #ff0000;
+  }
