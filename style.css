@@ -203,3 +203,12 @@ body {
 .flex3 {
     align-self: flex-end;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-container > div {
+    border: 1px solid black;
+}
