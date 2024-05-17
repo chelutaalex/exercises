@@ -206,17 +206,10 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template: auto auto / auto auto auto auto auto ;
 }
 
 .grid-container > div {
     border: 1px solid black;
 }
 
-.ottoenove {
-    grid-column: 2 / span 2;
-}
-
-.unoequattro {
-    grid-row: 1 / span 2;
-}
