@@ -224,6 +224,23 @@ body {
     body {
         background-color: blue;
     }
+
+    *{
+        font-size: 8px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    *{
+        background-color: #ff0000;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    *{
+        background-color: green;
+    }
 }
 
 .card {
