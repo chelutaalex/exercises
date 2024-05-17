@@ -253,3 +253,66 @@ body {
     position: fixed;
     background-color: #ff0000;
   }
+
+  .websitelayout {
+    height: 600px;
+    width: 1000px;
+    border: 1px solid black;
+  }
+
+  .websitelayout > div {
+    margin: 5px;
+  }
+
+  .header {
+    height: 50px;
+    padding-top: 30px;
+    background-color: #ddd;
+    text-align: center;
+  }
+
+  .navmenu {
+    height: 20px;
+    padding-top: 20px;
+    background-color: #ddd;
+    text-align: center;
+  }
+
+  .mainsection {
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .leftcontent {
+    height: 175px;
+    width: 200px;
+    padding-top: 175px;
+    background-color: #ddd;
+    text-align: center;
+  }
+
+  .maincontent {
+    height: 175px;
+    width: 100%;
+    padding-top: 175px;
+    background-color: #ddd;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .rightcontent {
+    height: 175px;
+    width: 200px;
+    padding-top: 175px;
+    background-color: #ddd;
+    text-align: center;
+  }
+
+  .footer {
+    height: 30px;
+    padding-top: 30px;
+    background-color: #ddd;
+    text-align: center;
+  }
