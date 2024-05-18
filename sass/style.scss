@@ -1,12 +1,15 @@
+$colorerosso: #ff0000;
+$font18: 18px;
+
 .navbar{
     ul{
         list-style: none;
         text-align: center;
         li{
             display: inline;
-            font-size: 18px;
+            font-size: $font18;
             :hover {
-                color: #ff0000;
+                color: $colorerosso;
             }
         }
     }
