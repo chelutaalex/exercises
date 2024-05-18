@@ -1,8 +1,13 @@
 .navbar ul {
   list-style: none;
+  text-align: center;
 }
 .navbar ul li {
   display: inline;
+  font-size: 18px;
+}
+.navbar ul li :hover {
+  color: #ff0000;
 }
 
 /*# sourceMappingURL=style.css.map */

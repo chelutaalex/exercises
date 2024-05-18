@@ -1,8 +1,13 @@
 .navbar{
     ul{
         list-style: none;
+        text-align: center;
         li{
             display: inline;
+            font-size: 18px;
+            :hover {
+                color: #ff0000;
+            }
         }
     }
 }
