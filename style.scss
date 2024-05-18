@@ -1,0 +1,16 @@
+.esempio {
+    p {
+        color: red;
+    }
+}
+
+.esempio {
+    &.esempio2 {
+        p {
+            color: green;
+        }
+        &:hover {
+            color: yellow;
+        }
+    }
+}
