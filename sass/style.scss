@@ -15,12 +15,10 @@ $font18: 18px;
             & :hover {
                 color: $colorerosso;
             }
-            :nth-child(4){
-                @extend .extend;
-                border-style: solid;
-                border: 1px;
-                border-color: #333333;
-            }
+        }
+        :nth-child(4){
+            @extend .extend;
+            border: #333333 ,solid ,2px;
         }
     }
 }
