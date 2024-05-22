@@ -10,11 +10,28 @@
   display: inline;
   font-size: 18px;
 }
-.navbar ul li :hover {
-  color: #ff0000;
-}
 .navbar ul :nth-child(4) {
   border: #333333, solid, 2px;
+}
+
+.navbarlight {
+  background-color: white;
+}
+.navbarlight li a {
+  color: black;
+}
+.navbarlight li a:hover {
+  color: #ff0000;
+}
+
+.navbardark {
+  background-color: black;
+}
+.navbardark li a {
+  color: white;
+}
+.navbardark li a:hover {
+  color: yellow;
 }
 
 .primodiv {

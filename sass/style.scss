@@ -1,31 +1,63 @@
-@use 'modulo' ;
+@use 'modulo';
 $widthseconddiv: 100% / 3;
-
-
 $font18: 18px;
 
-.extend{
-    background-color: #e7e7e7;
-}
+@mixin navbar-theme($theme) {
+    @if $theme =='light' {
+        background-color: white;
 
-.navbar{
-    ul{
-        list-style: none;
-        text-align: center;
-        li{
-            display: inline;
-            font-size: $font18;
-            & :hover {
-                color: modulo.$colorerosso;
+        li {
+            a {
+                color: black;
+
+                &:hover {
+                    color: modulo.$colorerosso;
+                }
             }
         }
-        :nth-child(4){
-            @extend .extend;
-            border: #333333 ,solid ,2px;
+    }
+
+    @else if $theme =='dark' {
+        background-color: black;
+
+        li {
+            a {
+                color: white;
+
+                &:hover {
+                    color: yellow;
+                }
+            }
         }
     }
 }
 
+.extend {
+    background-color: #e7e7e7;
+}
+
+.navbar {
+    ul {
+        list-style: none;
+        text-align: center;
+        li {
+            display: inline;
+            font-size: $font18;
+        }
+        :nth-child(4) {
+            @extend .extend;
+            border: #333333, solid, 2px;
+        }
+    }
+}
+
+.navbarlight {
+    @include navbar-theme('light');
+}
+
+.navbardark {
+    @include navbar-theme('dark');
+}
 
 .primodiv {
     width: $widthseconddiv;
