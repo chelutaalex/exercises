@@ -1,3 +1,7 @@
+.extend, .navbar ul li :nth-child(4) {
+  background-color: #e7e7e7;
+}
+
 .navbar ul {
   list-style: none;
   text-align: center;
@@ -8,6 +12,11 @@
 }
 .navbar ul li :hover {
   color: #ff0000;
+}
+.navbar ul li :nth-child(4) {
+  border-style: solid;
+  border: 1px;
+  border-color: #333333;
 }
 
 /*# sourceMappingURL=style.css.map */
