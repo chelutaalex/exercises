@@ -1,4 +1,6 @@
-$colorerosso: #ff0000;
+@use 'modulo' ;
+
+
 $font18: 18px;
 
 .extend{
@@ -13,7 +15,7 @@ $font18: 18px;
             display: inline;
             font-size: $font18;
             & :hover {
-                color: $colorerosso;
+                color: modulo.$colorerosso;
             }
         }
         :nth-child(4){
