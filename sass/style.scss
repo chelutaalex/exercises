@@ -8,7 +8,7 @@ $font18: 18px;
         li{
             display: inline;
             font-size: $font18;
-            :hover {
+            & :hover {
                 color: $colorerosso;
             }
         }
