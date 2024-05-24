@@ -42,4 +42,12 @@
   font-size: 1em;
 }
 
+.container div:nth-child(1) {
+  background-color: lightgrey;
+}
+
+.container div:nth-child(2) {
+  background-color: darkgrey;
+}
+
 /*# sourceMappingURL=style.css.map */

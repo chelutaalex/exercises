@@ -1,5 +1,5 @@
 @use 'modulo';
-$widthseconddiv: 100% / 3;
+$widthseconddiv: calc(100% / 3);
 $font18: 18px;
 $noHover: true;
 
@@ -70,11 +70,17 @@ $noHover: true;
     width: $widthseconddiv;
 }
 
-@function em($target, $content: $font18) {
-    @return ($target / $content) * 1em;
+@function em($target, $content: 18px) {
+    @return calc(($target / $content) * 1em);
 }
 
 .text-large {
     font-size: em(18px);
 }
 
+@for $i from 1 through 2 {
+    $backgroundcolor: if($i == 1, lightgrey, darkgrey);
+    .container div:nth-child(#{$i}) {
+            background-color: $backgroundcolor;
+        }
+    }
