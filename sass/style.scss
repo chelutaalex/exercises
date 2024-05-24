@@ -62,3 +62,11 @@ $font18: 18px;
 .primodiv {
     width: $widthseconddiv;
 }
+
+@function em($target, $content: $font18) {
+    @return ($target / $content) * 1em;
+}
+
+.text-large {
+    font-size: em(18px);
+}
