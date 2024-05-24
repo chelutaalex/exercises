@@ -206,8 +206,8 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template: auto auto auto auto / auto auto auto auto;
-    gap: 10px;
+    grid-template-columns: repeat(5 , 1fr);
+    grid-gap: 10px;
 }
 
 .grid-container > div {
