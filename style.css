@@ -212,8 +212,10 @@ body {
 }
 
 .grid-container > div {
+    display: flex;
+    justify-content: center;
     border: 1px solid black;
-    text-align: center;
+    align-items: center;
 }
 
 .equal {
