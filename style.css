@@ -204,7 +204,11 @@ body {
     align-self: flex-end;
 }
 
-
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    grid-gap: 10px;
+}
 
 .grid-container > div {
     border: 1px solid black;
