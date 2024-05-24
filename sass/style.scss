@@ -2,6 +2,13 @@
 $widthseconddiv: calc(100% / 3);
 $font18: 18px;
 $noHover: true;
+$menucolors: (home:red , blog: yellow, about: green, contact:purple);
+
+@each $voice, $color in $menucolors{
+    .#{$voice} {
+        color: $color;
+            }
+}
 
 @mixin navbar-theme($theme) {
     @if $theme =='light' {
