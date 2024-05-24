@@ -208,6 +208,7 @@ body {
     display: grid;
     grid-template-columns: repeat(5 , 1fr);
     grid-gap: 10px;
+    grid-template-rows: 30px 60px;
 }
 
 .grid-container > div {
