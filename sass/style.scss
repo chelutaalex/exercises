@@ -1,6 +1,7 @@
 @use 'modulo';
 $widthseconddiv: 100% / 3;
 $font18: 18px;
+$noHover: true;
 
 @mixin navbar-theme($theme) {
     @if $theme =='light' {
@@ -29,6 +30,12 @@ $font18: 18px;
                 }
             }
         }
+    }
+}
+
+@if $noHover == false {
+    &:hover {
+        color: green;
     }
 }
 
@@ -70,3 +77,4 @@ $font18: 18px;
 .text-large {
     font-size: em(18px);
 }
+
