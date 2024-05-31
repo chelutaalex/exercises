@@ -1,4 +1,4 @@
-let variabile1;
+let variabile1=5;
 const variabile2="Mondo";
 
 variabile1 = "Ciao" ;
