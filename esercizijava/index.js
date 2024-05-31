@@ -23,9 +23,21 @@ let outside = 10;
 }
 console.log(outside);
 console.log(inside);
-*/
+
 
 //esercizio 5
 for(i = 0; i <= 20; i += 2){
     console.log(i);
 }
+
+*/
+
+//esercizio 6
+let i = 10;
+
+while(i>0) {
+    if( i % 2 != 0){
+        console.log(i);
+    }
+    i--;
+} 
