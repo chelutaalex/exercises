@@ -14,8 +14,6 @@ let number = 5;
 
 console.log(number);
 
-*/
-
 //esercizio 4 
 let outside = 10;
 {
@@ -25,3 +23,9 @@ let outside = 10;
 }
 console.log(outside);
 console.log(inside);
+*/
+
+//esercizio 5
+for(i = 0; i <= 20; i += 2){
+    console.log(i);
+}
