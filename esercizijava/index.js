@@ -30,7 +30,7 @@ for(i = 0; i <= 20; i += 2){
     console.log(i);
 }
 
-*/
+
 
 //esercizio 6
 let i = 10;
@@ -41,3 +41,8 @@ while(i>0) {
     }
     i--;
 } 
+*/
+
+//esercizio 7
+
+let word = prompt(parola);
