@@ -46,4 +46,4 @@ while(i>0) {
 //esercizio 7 e 8
 
 let word = prompt('parola');
-console.log(word.lenght);
+console.log(word.length);
