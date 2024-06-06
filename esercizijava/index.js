@@ -41,9 +41,18 @@ while(i>0) {
     }
     i--;
 } 
-*/
+
 
 //esercizio 7 e 8
 
 let word = prompt('Inserisci una parola');
 console.log(word.length);
+*/
+
+//esercizio 10
+let number = 8;
+if (number < 5) {
+    console.log("Numero minore di 5")
+} else {
+    console.log("Numero maggiore di 5")
+}
