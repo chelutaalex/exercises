@@ -45,5 +45,5 @@ while(i>0) {
 
 //esercizio 7 e 8
 
-let word = prompt('parola');
+let word = prompt('Inserisci una parola');
 console.log(word.length);
