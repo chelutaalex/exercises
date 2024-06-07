@@ -104,7 +104,7 @@ switch (true) {
     default:
     console.log("voto errato");
 }
-*/
+
 
 
 //esercizio 13 e 14 
@@ -115,5 +115,13 @@ for(let i = 0; i < array.length; i++){
 }
 
 console.log(somma);
+*/
 
-
+//esercizio 15
+let array = [1, 2, 3, 4, 5];
+let counter = 0;
+for(i = array.length; i > 0; i--){
+    array[counter] = i;
+    counter = counter + 1;
+}
+console.log(array);
