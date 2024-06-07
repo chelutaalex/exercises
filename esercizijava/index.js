@@ -58,15 +58,6 @@ if (number < 5) {
 }
 
 
-//esercizio 9 
-let word;
-do {
-    word = prompt("Inserisci una parola di 5 lettere");
-} while(word.length = 5);
-console.log(word);
-console.log(length);
-
-
 //esercizio 11
 let score;
 score = prompt("Inserisci il voto");
@@ -115,7 +106,7 @@ for(let i = 0; i < array.length; i++){
 }
 
 console.log(somma);
-*/
+
 
 //esercizio 15
 let array = [1, 2, 3, 4, 5];
@@ -125,3 +116,12 @@ for(i = array.length; i > 0; i--){
     counter = counter + 1;
 }
 console.log(array);
+*/
+
+//esercizio 9 
+let word;
+do {
+    word = prompt("Inserisci una parola di 5 lettere");
+} while(word.length < 5);
+console.log(word);
+console.log(length);
