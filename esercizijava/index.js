@@ -116,7 +116,7 @@ for(i = array.length; i > 0; i--){
     counter = counter + 1;
 }
 console.log(array);
-*/
+
 
 //esercizio 9 
 let word;
@@ -125,3 +125,18 @@ do {
 } while(word.length < 5);
 console.log(word);
 console.log(length);
+
+*/
+
+//eserciaio 16
+let parole = [];
+for(let i = 0; i < 5; i++){
+    let parola = prompt("Inserisci una parola");
+    parole.push(parola);
+}
+
+for(i = 0; i < parole.length; i++){
+    if(parole[i].length % 2 != 0 ){
+        console.log(parole[i]);
+    }
+}
