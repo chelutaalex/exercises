@@ -79,7 +79,7 @@ if (score > 90){
 } else if (score <= 59) {
     console.log("voto insufficiente");
 }
-*/
+
 
 //esercizio 12 
 let score;
@@ -104,3 +104,9 @@ switch (true) {
     default:
     console.log("voto errato");
 }
+
+*/
+
+//esercizio 13
+let array = [1, 2, 3, 4, 5]
+console.log(array);
