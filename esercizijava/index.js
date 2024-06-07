@@ -126,7 +126,7 @@ do {
 console.log(word);
 console.log(length);
 
-*/
+
 
 //eserciaio 16
 let parole = [];
@@ -140,3 +140,13 @@ for(i = 0; i < parole.length; i++){
         console.log(parole[i]);
     }
 }
+    */
+
+//esercizio 17
+let person = {
+    name : "Carlo",
+    age : 24,
+    city : "Roma",
+} ;
+
+console.log(person);
