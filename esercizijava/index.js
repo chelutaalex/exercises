@@ -142,11 +142,11 @@ for(i = 0; i < parole.length; i++){
 }
     */
 
-//esercizio 17
+//esercizio 17 e 18
 let person = {
     name : "Carlo",
     age : 24,
     city : "Roma",
 } ;
 
-console.log(person);
+console.log(person.age);
