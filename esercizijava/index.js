@@ -47,7 +47,7 @@ while(i>0) {
 
 let word = prompt('Inserisci una parola');
 console.log(word.length);
-*/
+
 
 //esercizio 10
 let number = 8;
@@ -55,4 +55,27 @@ if (number < 5) {
     console.log("Numero minore di 5")
 } else {
     console.log("Numero maggiore di 5")
+}
+
+
+//esercizio 9 
+let word;
+do {
+    word = prompt("Inserisci una parola di 5 lettere");
+} while(word.length = 5);
+console.log(word);
+console.log(length);
+*/
+
+//esercizio 11
+let score;
+score = prompt("Inserisci il voto");
+if (score > 90){
+    console.log("Voto ottimo");
+} else if (score > 70) {
+    console.log("voto buono");
+} else if (score > 60) {
+    console.log("voto sufficiente");
+} else if (score <= 59) {
+    console.log("voto insufficiente");
 }
