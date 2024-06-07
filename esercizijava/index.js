@@ -65,7 +65,7 @@ do {
 } while(word.length = 5);
 console.log(word);
 console.log(length);
-*/
+
 
 //esercizio 11
 let score;
@@ -78,4 +78,29 @@ if (score > 90){
     console.log("voto sufficiente");
 } else if (score <= 59) {
     console.log("voto insufficiente");
+}
+*/
+
+//esercizio 12 
+let score;
+score = prompt("Inserisci il voto");
+switch (true) {
+    case score > 0 && score < 59: 
+    console.log("voto insufficiente");
+    break;
+
+    case score > 60 && score < 69:
+    console.log("voto sufficiente");
+    break;
+
+    case score > 70 && score < 89:
+    console.log("voto buono");
+    break;
+
+    case score > 90 && score < 100:
+    console.log("Voto ottimo");
+    break;
+
+    default:
+    console.log("voto errato");
 }
