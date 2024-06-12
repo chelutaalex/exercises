@@ -140,7 +140,7 @@ for(i = 0; i < parole.length; i++){
         console.log(parole[i]);
     }
 }
-    */
+   
 
 //esercizio 17 e 18 e 19 e 20 e 21
 let person = {
@@ -159,3 +159,15 @@ let person = {
         console.log(person[key]);
         
     }
+         */
+
+  //  esercizio 22
+
+  function outerFunction (x) {
+    function innerFunction(y) {
+        return x+y;
+    }
+    return innerFunction;
+  }
+
+console.log(outerFunction(5)(8));
