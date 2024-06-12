@@ -161,13 +161,14 @@ let person = {
     }
          */
 
-  //  esercizio 22
+  //  esercizio 22 e 23
 
-  function outerFunction (x) {
+  function outerFunction (x, initialValue) {
+    let result = initialValue;
     function innerFunction(y) {
-        return x+y;
+        return result += y;
     }
     return innerFunction;
   }
 
-console.log(outerFunction(5)(8));
+console.log(outerFunction(5, 7)(8));
