@@ -195,6 +195,7 @@ console.log(counter.increment());
 console.log(counter.decrement());
 */
 
+//esercizio 24 e 25
 let student = {
     name : "Carlo",
     age : 23,
@@ -203,3 +204,4 @@ let student = {
 }
 
 console.log(Object.keys(student))
+console.log(Object.values(student))
