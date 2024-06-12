@@ -159,7 +159,7 @@ let person = {
         console.log(person[key]);
         
     }
-         */
+         
 
   //  esercizio 22 e 23
 
@@ -172,3 +172,24 @@ let person = {
   }
 
 console.log(outerFunction(5, 7)(8));
+*/
+
+//esercizio 24
+
+function createCounter() {
+    let count = 0;
+    return {
+        increment : function(){
+            count++;
+            return count;
+        },
+        decrement : function(){
+            count--
+            return count;
+        }
+    }
+}
+
+let counter = createCounter();
+console.log(counter.increment());
+console.log(counter.decrement());
