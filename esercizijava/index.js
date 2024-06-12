@@ -172,7 +172,7 @@ let person = {
   }
 
 console.log(outerFunction(5, 7)(8));
-*/
+
 
 //esercizio 24
 
@@ -193,3 +193,13 @@ function createCounter() {
 let counter = createCounter();
 console.log(counter.increment());
 console.log(counter.decrement());
+*/
+
+let student = {
+    name : "Carlo",
+    age : 23,
+    grade : 2, 
+    school : "primary"
+}
+
+console.log(Object.keys(student))
