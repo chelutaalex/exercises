@@ -149,6 +149,13 @@ let person = {
     city : "Roma",
 } ;
 
-    person.job = "Barbiere";
-    person.age = 30;
-    console.log(person.job);
+ //   person.job = "Barbiere";
+  //  person.age = 30;
+  //  console.log(person.job);
+
+    for(key in person ){
+        
+        console.log(key);
+        console.log(person[key]);
+        
+    }
