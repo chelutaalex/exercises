@@ -193,7 +193,7 @@ function createCounter() {
 let counter = createCounter();
 console.log(counter.increment());
 console.log(counter.decrement());
-*/
+
 
 //esercizio 24 e 25 e 26
 let student = {
@@ -204,3 +204,12 @@ let student = {
 }
 
 console.log(Object.entries(student))
+*/
+
+//esercizio 27
+
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach(element => console.log(element*2));
+
+const squaredNumbers = numbers.map((x) => x * x);
+console.log(squaredNumbers);
