@@ -226,7 +226,7 @@ let nonPassed = students.find((element) => grade < 60);
 console.log(nonPassed);
 console.log(passedStudents);
 
-*/
+
 
 //esercizio 29 reduce & sort
 
@@ -241,3 +241,27 @@ words.sort();
 
 console.log(words);
 console.log(sommaSpese);
+*/
+
+// esercizio 30 automobile
+
+class Automobile {
+    marca = ""
+    modello = ""
+    anno = 0
+
+    constructor(marca, modello, anno) {
+        this.marca = marca
+        this.modello = modello
+        this.anno = anno
+    }
+
+    descrizione() {
+        return "La marca del veicolo è " + marca + "il modelllo " + modello + 
+        "di anno" + anno ;
+    }
+
+}
+//let fiat = new Automobile("fiat", "punto", 2010);
+
+//console.log(Automobile.descrizione);
