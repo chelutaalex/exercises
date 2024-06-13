@@ -243,17 +243,27 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30 automobile
+// esercizio 30, 31 automobile
 
 class Automobile {
     marca = ""
     modello = ""
     anno = 0
+    chilometraggio = 0
 
     constructor(marca, modello, anno) {
         this.marca = marca
         this.modello = modello
         this.anno = anno
+        this.chilometraggio = chilometraggio
+    }
+
+    aggiungiChilometri() {
+        chilometraggio = chilometraggio++;
+    }
+
+    mostraChilometraggio() {
+        return chilometraggio;
     }
 
     descrizione() {
@@ -262,6 +272,3 @@ class Automobile {
     }
 
 }
-//let fiat = new Automobile("fiat", "punto", 2010);
-
-//console.log(Automobile.descrizione);
