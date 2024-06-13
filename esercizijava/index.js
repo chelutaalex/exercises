@@ -204,7 +204,7 @@ let student = {
 }
 
 console.log(Object.entries(student))
-*/
+
 
 //esercizio 27
 
@@ -213,3 +213,15 @@ numbers.forEach(element => console.log(element*2));
 
 const squaredNumbers = numbers.map((x) => x * x);
 console.log(squaredNumbers);
+
+*/
+
+//esercizio 28
+
+let students = [name = "Michele", grade = 60];
+
+let passedStudents = students.filter((studentGrade) => grade >= 60);
+let nonPassed = students.find((element) => grade < 60);
+
+console.log(nonPassed);
+console.log(passedStudents);
