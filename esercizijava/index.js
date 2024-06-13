@@ -251,7 +251,7 @@ class Automobile {
     anno = 0
     chilometraggio = 0
 
-    constructor(marca, modello, anno) {
+    constructor(marca, modello, anno, chilometraggio) {
         this.marca = marca
         this.modello = modello
         this.anno = anno
@@ -269,6 +269,26 @@ class Automobile {
     descrizione() {
         return "La marca del veicolo è " + marca + "il modelllo " + modello + 
         "di anno" + anno ;
+    }
+
+}
+
+class Elettrica extends Automobile {
+    autonomia = 0
+
+    constructor(marca, modello,anno ,chilometraggio ,autonomia) {
+        super(marca, modello,anno ,chilometraggio);
+
+        this.autonomia = autonomia;
+    }
+
+    descrizione() {
+        return "La marca del veicolo è " + marca + "il modelllo " + modello + 
+        "di anno" + anno + "autonimoa:" +autonomia+ "km";
+    }
+
+    ricarica() {
+        autonomia = autonomia++;
     }
 
 }
