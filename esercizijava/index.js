@@ -231,8 +231,13 @@ console.log(passedStudents);
 //esercizio 29 reduce & sort
 
 let expenses = [21, 40, 182];
+let words = ["banana", "apple", "cherry","date"]
+
 const sommaSpese = expenses.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
 );
 
+words.sort();
+
+console.log(words);
 console.log(sommaSpese);
