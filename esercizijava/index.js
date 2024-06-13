@@ -214,7 +214,7 @@ numbers.forEach(element => console.log(element*2));
 const squaredNumbers = numbers.map((x) => x * x);
 console.log(squaredNumbers);
 
-*/
+
 
 //esercizio 28
 
@@ -225,3 +225,14 @@ let nonPassed = students.find((element) => grade < 60);
 
 console.log(nonPassed);
 console.log(passedStudents);
+
+*/
+
+//esercizio 29 reduce & sort
+
+let expenses = [21, 40, 182];
+const sommaSpese = expenses.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+);
+
+console.log(sommaSpese);
