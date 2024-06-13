@@ -243,7 +243,7 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30, 31, 32 automobile
+// esercizio 30, 31, 32, 33 automobile
 
 class Automobile {
     marca = ""
@@ -277,7 +277,7 @@ class Elettrica extends Automobile {
     autonomia = 0
 
     constructor(marca, modello,anno ,chilometraggio ,autonomia) {
-        super(marca, modello,anno ,chilometraggio);
+        super(marca ,modello,anno ,chilometraggio);
 
         this.autonomia = autonomia;
     }
@@ -292,3 +292,7 @@ class Elettrica extends Automobile {
     }
 
 }
+
+Automobile.prototype.saluta = function() {
+    return "Saluti da parte di " + marca + modello
+} ;
