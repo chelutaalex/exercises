@@ -243,7 +243,7 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30, 31, 32, 33 , 34, 35 automobile
+// esercizio 30, 31, 32, 33 , 34, 35, 36 automobile
 
 class Automobile {
     marca = ""
@@ -257,6 +257,16 @@ class Automobile {
         this.modello = modello
         this.anno = anno
         this.chilometraggio = chilometraggio
+    }
+
+    static confrontaChilometraggio(auto1, auto2) {
+        if (auto1.chilometraggio > auto2.chilometraggio){
+            return `${auto1.modello} ha un chilometraggio maggiore`;
+        } else if (auto1.chilometraggio < auto2.chilometraggio) {
+            return `${auto2.modello} ha un chilometraggio maggiore`;
+        } else {
+            return `Le automobili hanno lo stersso chilometraggio`;
+        }
     }
 
     aggiungiChilometri() {
@@ -316,3 +326,9 @@ class Elettrica extends Automobile {
 Automobile.prototype.saluta = function() {
     return "Saluti da parte di " + marca + modello
 } ;
+
+const auto1 = new Automobile('Toyota', 'Corolla',2015 , 50000);
+const auto2 = new Automobile('Honda' ,'Civic',2010 ,45000);
+
+const risultato = Automobile.confrontaChilometraggio(auto1, auto2);
+console.log(risultato);
