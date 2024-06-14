@@ -243,14 +243,14 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30, 31, 32, 33 , 34, 35, 36 automobile
+// esercizio 30, 31, 32, 33 , 34, 35, 36, 37 automobile
 
 class Automobile {
     marca = ""
     modello = ""
     anno = 0
     chilometraggio = 0
-    
+    #contatoreChilometri = 0
 
     constructor(marca, modello, anno, chilometraggio) {
         this.marca = marca
@@ -327,8 +327,3 @@ Automobile.prototype.saluta = function() {
     return "Saluti da parte di " + marca + modello
 } ;
 
-const auto1 = new Automobile('Toyota', 'Corolla',2015 , 50000);
-const auto2 = new Automobile('Honda' ,'Civic',2010 ,45000);
-
-const risultato = Automobile.confrontaChilometraggio(auto1, auto2);
-console.log(risultato);
