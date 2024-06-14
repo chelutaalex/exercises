@@ -269,6 +269,10 @@ class Automobile {
         }
     }
 
+    getContatoreChiamate() {
+        return this.#contatoreChilometri ;
+    }
+
     aggiungiChilometri() {
         chilometraggio = chilometraggio++;
     }
