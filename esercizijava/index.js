@@ -279,6 +279,10 @@ class Automobile {
     mostraEta() {
         return this.#calcolaEta();
     }
+
+    _controllaChilometri() {
+        return chilometraggio ;
+    }
 }
 
 class Elettrica extends Automobile {
@@ -297,6 +301,14 @@ class Elettrica extends Automobile {
 
     ricarica() {
         autonomia = autonomia++;
+    }
+
+    _controllaChilometri(chilometraggio) {
+        if (chilometraggio > 100000) {
+            return "Troppi km"
+        }else {
+            return "Meno di 100000 km"
+        }
     }
 
 }
