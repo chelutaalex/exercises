@@ -243,13 +243,14 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30, 31, 32, 33 automobile
+// esercizio 30, 31, 32, 33 , 34 automobile
 
 class Automobile {
     marca = ""
     modello = ""
     anno = 0
     chilometraggio = 0
+    
 
     constructor(marca, modello, anno, chilometraggio) {
         this.marca = marca
@@ -271,6 +272,13 @@ class Automobile {
         "di anno" + anno ;
     }
 
+    #calcolaEta() {
+        return anno - Date.getFullYear();
+    }
+    
+    mostraEta() {
+        return this.#calcolaEta();
+    }
 }
 
 class Elettrica extends Automobile {
