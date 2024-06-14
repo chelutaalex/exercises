@@ -243,14 +243,14 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30, 31, 32, 33 , 34, 35, 36, 37 automobile
+// esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38 automobile
 
 class Automobile {
     marca = ""
     modello = ""
     anno = 0
     chilometraggio = 0
-    #contatoreChilometri = 0
+    #contatoreChiamate = 0
 
     constructor(marca, modello, anno, chilometraggio) {
         this.marca = marca
@@ -269,8 +269,12 @@ class Automobile {
         }
     }
 
+    #incrementaContatore() {
+        this.#contatoreChiamate++;
+    }
+
     getContatoreChiamate() {
-        return this.#contatoreChilometri ;
+        return this.#contatoreChiamate ;
     }
 
     aggiungiChilometri() {
