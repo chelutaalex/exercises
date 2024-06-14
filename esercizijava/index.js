@@ -243,7 +243,7 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30, 31, 32, 33 , 34 automobile
+// esercizio 30, 31, 32, 33 , 34, 35 automobile
 
 class Automobile {
     marca = ""
