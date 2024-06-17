@@ -241,7 +241,7 @@ words.sort();
 
 console.log(words);
 console.log(sommaSpese);
-*/
+
 
 // esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38, 39, 40 ,41(getter) ,42 , 43, 44 , 45 automobile
 
@@ -401,3 +401,12 @@ if(camion1 instanceof Camion) {
 } else {
     return "camion1 non appartiene ad camion"
 }
+
+*/
+
+//esercizio 46 
+
+let numeri = [1, 2, 3 ,4 ,5 ,6];
+let [uno, due] = numeri;
+
+console.log(uno ,due);
