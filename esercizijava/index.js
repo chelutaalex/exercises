@@ -243,7 +243,7 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38, 39, 40 ,41(getter) ,  automobile
+// esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38, 39, 40 ,41(getter) ,42  automobile
 
 class Automobile {
     marca = ""
@@ -267,6 +267,15 @@ class Automobile {
         } else {
             return `Le automobili hanno lo stersso chilometraggio`;
         }
+    }
+
+    set chilometraggio(chilometraggio) {
+        if(this.chilometraggio >= chilometraggio)
+            {
+              return chilometraggio = this.chilometraggio;
+            } else {
+                return "Chilometraggio nuovo non può essere minore di prima";
+            }
     }
 
     get chilometraggio() {
