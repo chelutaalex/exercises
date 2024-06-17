@@ -243,7 +243,7 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38, 39, 40 ,41(getter) ,42 , 43 automobile
+// esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38, 39, 40 ,41(getter) ,42 , 43, 44 automobile
 
 class Automobile {
     marca = ""
@@ -354,7 +354,26 @@ class Elettrica extends Automobile {
 }
 
 class Camion extends Automobile {
+    caricoMassimo = 0;
 
+    constructor(marca, modello,anno ,chilometraggio , caricoMassimo) {
+        super(marca ,modello,anno ,chilometraggio);
+
+        this.caricoMassimo = caricoMassimo ;
+    }
+
+    descrizione() {
+        return "La marca del veicolo è " + marca + "il modelllo " + modello + 
+        "di anno" + anno + "carico massimo" + caricoMassimo;
+    }
+
+    carica() {
+        if(this.caricoMassimo > caricoMassimo) {
+            return "Carico massimo superato"
+        } else {
+            caricoMassimo = this.caricoMassimo ; 
+        }
+    }
 }
 
 Automobile.prototype.saluta = function() {
