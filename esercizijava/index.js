@@ -243,7 +243,7 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38, 39, 40 ,41(getter) ,42  automobile
+// esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38, 39, 40 ,41(getter) ,42 , 43 automobile
 
 class Automobile {
     marca = ""
@@ -350,6 +350,10 @@ class Elettrica extends Automobile {
             return "Meno di 100000 km"
         }
     }
+
+}
+
+class Camion extends Automobile {
 
 }
 
