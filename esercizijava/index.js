@@ -243,7 +243,7 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38, 39, 40 automobile
+// esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38, 39, 40 ,41(getter) ,  automobile
 
 class Automobile {
     marca = ""
@@ -267,6 +267,10 @@ class Automobile {
         } else {
             return `Le automobili hanno lo stersso chilometraggio`;
         }
+    }
+
+    get chilometraggio() {
+        return this.chilometraggio;
     }
 
     mostraContatoreChiamate() {
