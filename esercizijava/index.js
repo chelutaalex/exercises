@@ -243,7 +243,7 @@ console.log(words);
 console.log(sommaSpese);
 */
 
-// esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38, 39, 40 ,41(getter) ,42 , 43, 44 automobile
+// esercizio 30, 31, 32, 33 , 34, 35, 36, 37, 38, 39, 40 ,41(getter) ,42 , 43, 44 , 45 automobile
 
 class Automobile {
     marca = ""
@@ -323,6 +323,14 @@ class Automobile {
     _controllaChilometri() {
         return chilometraggio ;
     }
+
+    static varificaIstanza(obj, classe) {
+        if(obj instanceof classe){
+            return "obj è un istanza di classe"
+        }else {
+            return "obj non è un istanza di classe"
+        }
+    }
 }
 
 class Elettrica extends Automobile {
@@ -380,3 +388,16 @@ Automobile.prototype.saluta = function() {
     return "Saluti da parte di " + marca + modello
 } ;
 
+let automobile1 = new Automobile("fiat" , "punto" , 2019 , 23000);
+if(automobile1 instanceof Automobile) {
+    return "automobile1 appartiene ad Automobili"
+} else {
+    return "automobile1 non appartiene ad Automobili"
+}
+
+let camion1 = new Camion("renault" , "camion" , 2019 , 23000 , 15000);
+if(camion1 instanceof Camion) {
+    return "camion1 appartiene ad camion"
+} else {
+    return "camion1 non appartiene ad camion"
+}
