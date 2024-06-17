@@ -404,9 +404,9 @@ if(camion1 instanceof Camion) {
 
 */
 
-//esercizio 46 
+//esercizio 46 ,47
 
 let numeri = [1, 2, 3 ,4 ,5 ,6];
-let [uno, due] = numeri;
+let [uno, due, tre] = numeri;
 
-console.log(uno ,due);
+console.log(uno ,tre);
