@@ -436,7 +436,7 @@ let macchina = {
 let{marca, modello , stato = "usata"} = macchina;
 
 console.log(marca, modello, stato);
-*/
+
 
 //esercizio 52
 
@@ -449,3 +449,13 @@ console.log(copiaNumeri);
 numeri[1] = 546 ;
 
 console.log(numeri);
+*/
+
+//esercizio 53
+
+let numeri = [1 , 2 ,3 ,4];
+let numeri2 = [5, 6, 7];
+
+let numeriUniti = [...numeri , ...numeri2];
+
+console.log(numeriUniti);
