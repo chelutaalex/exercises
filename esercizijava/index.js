@@ -459,7 +459,7 @@ let numeri2 = [5, 6, 7];
 let numeriUniti = [...numeri , ...numeri2];
 
 console.log(numeriUniti);
-*/
+
 
 //esercizio 54
 let macchina = {
@@ -470,3 +470,12 @@ let macchina = {
 let copiaMacchina = {...macchina , stato : "usata"};
 
 console.log(macchina, copiaMacchina);
+*/
+
+//esercizio 55
+let numeri = [1 , 2 ,3 ,4];
+function somma(...numeri) {
+    return numeri.reduce((acc,num) => acc + num,0);
+}
+
+console.log(somma(50, 70, 2));
