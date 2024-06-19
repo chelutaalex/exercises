@@ -410,7 +410,7 @@ let [uno, due, tre, quattro, cinque] = numeri;
 
 console.log(uno ,due ,tre ,quattro, cinque);
 
-*/
+
 
 //esercizio 49 , 50
 
@@ -420,6 +420,19 @@ let numeri = {
     tre : 3
 }
 
-let {uno: primo, due:secondo, tre:terzo} = numeri;
+let {uno: primo, due: secondo, tre:terzo} = numeri;
 
 console.log(primo, secondo, terzo);
+
+*/
+
+//esercizio 51
+
+let macchina = {
+    marca : "fiat",
+    modello : "punto",
+}
+
+let{marca, modello , stato = "usata"} = macchina;
+
+console.log(marca, modello, stato);
