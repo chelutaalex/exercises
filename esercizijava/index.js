@@ -470,7 +470,7 @@ let macchina = {
 let copiaMacchina = {...macchina , stato : "usata"};
 
 console.log(macchina, copiaMacchina);
-*/
+
 
 //esercizio 55
 let numeri = [1 , 2 ,3 ,4];
@@ -479,3 +479,13 @@ function somma(...numeri) {
 }
 
 console.log(somma(50, 70, 2));
+*/
+
+//esercizio 56
+let numeri = [1 , 2 ,3 ,4];
+
+let [primo, secondo, ...rest] = numeri;
+
+console.log(rest , primo , secondo);
+
+
