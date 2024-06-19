@@ -402,7 +402,6 @@ if(camion1 instanceof Camion) {
     return "camion1 non appartiene ad camion"
 }
 
-*/
 
 //esercizio 46 ,47 , 48
 
@@ -410,3 +409,17 @@ let numeri = [1, 2, 3 ,4 ];
 let [uno, due, tre, quattro, cinque] = numeri;
 
 console.log(uno ,due ,tre ,quattro, cinque);
+
+*/
+
+//esercizio 49
+
+let numeri = {
+    uno : 1,
+    due : 2,
+    tre : 3
+}
+
+let {uno, due, tre} = numeri;
+
+console.log(uno, due, tre);
