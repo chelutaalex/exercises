@@ -424,7 +424,7 @@ let {uno: primo, due: secondo, tre:terzo} = numeri;
 
 console.log(primo, secondo, terzo);
 
-*/
+
 
 //esercizio 51
 
@@ -436,3 +436,16 @@ let macchina = {
 let{marca, modello , stato = "usata"} = macchina;
 
 console.log(marca, modello, stato);
+*/
+
+//esercizio 52
+
+let numeri = [1 , 2 ,3 ,4];
+
+let copiaNumeri = [...numeri];
+
+console.log(copiaNumeri);
+
+numeri[1] = 546 ;
+
+console.log(numeri);
