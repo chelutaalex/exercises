@@ -412,7 +412,7 @@ console.log(uno ,due ,tre ,quattro, cinque);
 
 */
 
-//esercizio 49
+//esercizio 49 , 50
 
 let numeri = {
     uno : 1,
@@ -420,6 +420,6 @@ let numeri = {
     tre : 3
 }
 
-let {uno, due, tre} = numeri;
+let {uno: primo, due:secondo, tre:terzo} = numeri;
 
-console.log(uno, due, tre);
+console.log(primo, secondo, terzo);
