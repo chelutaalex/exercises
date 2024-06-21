@@ -479,7 +479,7 @@ function somma(...numeri) {
 }
 
 console.log(somma(50, 70, 2));
-*/
+
 
 //esercizio 56
 let numeri = [1 , 2 ,3 ,4];
@@ -488,4 +488,17 @@ let [primo, secondo, ...rest] = numeri;
 
 console.log(rest , primo , secondo);
 
+*/
 
+//esercizio 57
+
+let macchina = {
+    marca : "fiat",
+    modello : "punto",
+    stato : "usata",
+    chilometraggio : 250000
+}
+
+let {marca , modello , ...resto} = macchina;
+
+console.log(marca , modello , resto );
