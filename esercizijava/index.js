@@ -503,7 +503,7 @@ let {marca , modello , ...resto} = macchina;
 
 console.log(marca , modello , resto );
 
-*/
+
 
 //esercizio 58
 
@@ -515,3 +515,11 @@ let macchina = {
 }
 
 console.log(JSON.stringify(macchina));
+
+*/
+
+//esercizio 59
+
+let stringa = `{"marca" : "fiat", "modello" : "punto","stato" : "usata", "chilometraggio" : 250000}`
+
+console.log(JSON.parse(stringa));
