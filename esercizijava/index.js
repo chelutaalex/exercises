@@ -516,10 +516,43 @@ let macchina = {
 
 console.log(JSON.stringify(macchina));
 
-*/
+
 
 //esercizio 59
 
 let stringa = `{"marca" : "fiat", "modello" : "punto","stato" : "usata", "chilometraggio" : 250000}`
 
 console.log(JSON.parse(stringa));
+
+*/
+
+//esercizio 60
+
+const jsonString = `[
+    {
+      "nome": "Mario",
+      "cognome": "Rossi",
+      "eta": 30
+    },
+    {
+      "nome": "Luca",
+      "cognome": "Bianchi",
+      "eta": 25
+    },
+    {
+      "nome": "Giulia",
+      "cognome": "Verdi",
+      "eta": 35
+    }
+  ]`;
+
+const personeArray = JSON.parse(jsonString);
+const nuovaPersona = {
+  "nome": "Anna",
+  "cognome": "Neri",
+  "eta": 28
+};
+personeArray.push(nuovaPersona);
+const jsonStringAggiornato = JSON.stringify(personeArray, null, 2);
+
+console.log(jsonStringAggiornato);
