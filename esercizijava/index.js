@@ -488,7 +488,7 @@ let [primo, secondo, ...rest] = numeri;
 
 console.log(rest , primo , secondo);
 
-*/
+
 
 //esercizio 57
 
@@ -502,3 +502,16 @@ let macchina = {
 let {marca , modello , ...resto} = macchina;
 
 console.log(marca , modello , resto );
+
+*/
+
+//esercizio 58
+
+let macchina = {
+    marca : "fiat",
+    modello : "punto",
+    stato : "usata",
+    chilometraggio : 250000
+}
+
+console.log(JSON.stringify(macchina));
