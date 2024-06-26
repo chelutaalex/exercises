@@ -524,7 +524,7 @@ let stringa = `{"marca" : "fiat", "modello" : "punto","stato" : "usata", "chilom
 
 console.log(JSON.parse(stringa));
 
-*/
+
 
 //esercizio 60
 
@@ -556,3 +556,12 @@ personeArray.push(nuovaPersona);
 const jsonStringAggiornato = JSON.stringify(personeArray, null, 2);
 
 console.log(jsonStringAggiornato);
+
+*/
+
+//esercizio 61
+
+let nome = `Alex`;
+let cognome = `Cheluta`;
+console.log(nome +" "+ cognome);
+
