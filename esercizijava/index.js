@@ -560,8 +560,16 @@ console.log(jsonStringAggiornato);
 */
 
 //esercizio 61
-
+/*
 let nome = `Alex`;
 let cognome = `Cheluta`;
 console.log(nome +" "+ cognome);
 
+*/
+
+//esercizio 62
+
+let nome = `Alex` , cognome = `Cheluta` , eta = 27, citta = `Verona`;
+let stringa = `${nome} ${cognome} ${eta} ${citta}`;
+
+console.log(stringa);
