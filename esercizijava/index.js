@@ -575,6 +575,8 @@ let stringa = `${nome} ${cognome} ${eta} ${citta}`;
 console.log(stringa);
 
 
+//esercizio 63
+
 let persona = {
     nome : `Alex`,
     cognome : `Cheluta` ,
@@ -587,8 +589,8 @@ function stringa(persona) {
 console.log(stringa);
 
 
-
-//esercizio 63
+/*
+//esercizio 64
 let numero = 16344;
 let stringa = "Ciao mondo";
 let array = ["test esercizio"];
@@ -602,9 +604,9 @@ console.log(stringa);
 console.log(array);
 console.log(obj);
 
-*/
 
-//esercizio 64
+
+//esercizio 65
 
 let numero = 0;
 
@@ -613,3 +615,12 @@ if(numero == 1) {
 } else if(numero == 0) {
     console.warn("La variabile ha valore 0");
 }
+*/
+
+//esercizio 66
+
+
+let arrayDiOggetti = [obj1 = {}, obj2 = {}, obj3 = {}, obj4 = {}];
+console.table(arrayDiOggetti);
+console.group();
+console.log("Prova esercizio");
