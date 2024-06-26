@@ -655,7 +655,7 @@ function stringa(persona) {
 }
 
 console.log(stringa(persona));
-*/
+
 
 //esercizio 70
 
@@ -671,3 +671,25 @@ function divisione(a ,b) {
 }
 
 divisione(10 , 0);
+
+*/
+
+//esercizio 71
+
+function prova(string) {
+    try {
+        if(typeof string !== "string") {
+            throw new TypeError("Il parametro non è una stringa");
+        }
+        let a = string.toUpperCase();
+        if(a == false) {
+            throw new Error("Errore generico");
+        }
+    } catch {
+        if(error instanceof TypeError) {
+            console.error(error.message);
+        } else {
+            console.error("Errore");
+        }
+    }
+}
