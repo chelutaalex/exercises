@@ -586,7 +586,7 @@ function stringa(persona) {
 
 console.log(stringa);
 
-*/
+
 
 //esercizio 63
 let numero = 16344;
@@ -601,3 +601,15 @@ console.log(numero);
 console.log(stringa);
 console.log(array);
 console.log(obj);
+
+*/
+
+//esercizio 64
+
+let numero = 0;
+
+if(numero == 1) {
+    console.error("la variabile ha valore 1");
+} else if(numero == 0) {
+    console.warn("La variabile ha valore 0");
+}
