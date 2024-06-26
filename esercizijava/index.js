@@ -565,7 +565,7 @@ let nome = `Alex`;
 let cognome = `Cheluta`;
 console.log(nome +" "+ cognome);
 
-*/
+
 
 //esercizio 62
 
@@ -573,3 +573,31 @@ let nome = `Alex` , cognome = `Cheluta` , eta = 27, citta = `Verona`;
 let stringa = `${nome} ${cognome} ${eta} ${citta}`;
 
 console.log(stringa);
+
+
+let persona = {
+    nome : `Alex`,
+    cognome : `Cheluta` ,
+}
+
+function stringa(persona) {
+    return `${nome} ${cognome}`
+}
+
+console.log(stringa);
+
+*/
+
+//esercizio 63
+let numero = 16344;
+let stringa = "Ciao mondo";
+let array = ["test esercizio"];
+let obj = {
+    nome : `Alex`,
+    cognome : `Cheluta` ,
+}
+
+console.log(numero);
+console.log(stringa);
+console.log(array);
+console.log(obj);
