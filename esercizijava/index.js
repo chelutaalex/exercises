@@ -659,3 +659,15 @@ console.log(stringa(persona));
 
 //esercizio 70
 
+function divisione(a ,b) {
+    try{
+      if(b === 0) {
+        throw new Error("Il divisore non può essere 0");
+      }
+      console.log(a / b); 
+    } catch(error) {
+        console.log("errore:" ,error.message);
+    }
+}
+
+divisione(10 , 0);
