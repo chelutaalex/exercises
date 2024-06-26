@@ -631,10 +631,30 @@ setTimeout(function() {
     console.log("Sono passati 3 secondi")
 }, 3000);
 
-*/
+
 
 //esercizio 68
 
 setInterval(function() {
     console.log("Sono passati 2 secondi")
 }, 2000);
+
+
+
+//esercizio 69
+
+function prova() {
+    console.log("Ciao");
+}
+
+let interval = setInterval(prova, 1000);
+
+function clear() {
+    clearInterval(interval)
+    console.log("Intervallo interotto");
+}
+
+setTimeout(clear,5000);
+
+*/
+
