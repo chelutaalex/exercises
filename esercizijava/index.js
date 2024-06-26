@@ -575,19 +575,6 @@ let stringa = `${nome} ${cognome} ${eta} ${citta}`;
 console.log(stringa);
 
 
-//esercizio 63
-
-let persona = {
-    nome : `Alex`,
-    cognome : `Cheluta` ,
-}
-
-function stringa(persona) {
-    return `${nome} ${cognome}`
-}
-
-console.log(stringa);
-
 
 /*
 //esercizio 64
@@ -656,5 +643,19 @@ function clear() {
 
 setTimeout(clear,5000);
 
+//esercizio 63
+
+let persona = {
+    nome : "Alex",
+    cognome : "Cheluta" ,
+}
+
+function stringa(persona) {
+    return `${persona.nome} ${persona.cognome}`;
+}
+
+console.log(stringa(persona));
 */
+
+//esercizio 70
 
