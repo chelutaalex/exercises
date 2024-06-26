@@ -624,9 +624,17 @@ let arrayDiOggetti = [obj1 = {}, obj2 = {}, obj3 = {}, obj4 = {}];
 console.table(arrayDiOggetti);
 console.group();
 console.log("Prova esercizio");
-*/
+
 
 //esercizio 67
 setTimeout(function() {
     console.log("Sono passati 3 secondi")
 }, 3000);
+
+*/
+
+//esercizio 68
+
+setInterval(function() {
+    console.log("Sono passati 2 secondi")
+}, 2000);
