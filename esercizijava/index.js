@@ -615,7 +615,7 @@ if(numero == 1) {
 } else if(numero == 0) {
     console.warn("La variabile ha valore 0");
 }
-*/
+
 
 //esercizio 66
 
@@ -624,3 +624,9 @@ let arrayDiOggetti = [obj1 = {}, obj2 = {}, obj3 = {}, obj4 = {}];
 console.table(arrayDiOggetti);
 console.group();
 console.log("Prova esercizio");
+*/
+
+//esercizio 67
+setTimeout(function() {
+    console.log("Sono passati 3 secondi")
+}, 3000);
