@@ -696,7 +696,9 @@ function prova(string) {
     }
 }
 
-*/
+*/ 
+
+//esercizio 73 e 74
 
 const somma = (a, b) => {
     return a + b;
