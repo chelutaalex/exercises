@@ -674,7 +674,7 @@ divisione(10 , 0);
 
 */
 
-//esercizio 71
+//esercizio 71 e 72(finally)
 
 function prova(string) {
     try {
@@ -691,5 +691,7 @@ function prova(string) {
         } else {
             console.error("Errore");
         }
+    } finally {
+        console.log("l'operazione è statra eseguita indipedentemente dal risultato");
     }
 }
