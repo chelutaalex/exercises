@@ -672,7 +672,7 @@ function divisione(a ,b) {
 
 divisione(10 , 0);
 
-*/
+
 
 //esercizio 71 e 72(finally)
 
@@ -694,4 +694,14 @@ function prova(string) {
     } finally {
         console.log("l'operazione è statra eseguita indipedentemente dal risultato");
     }
+}
+
+*/
+
+const somma = (a, b) => {
+    return a + b;
+}
+
+const moltiplicazione = (somma, c) => {
+    return somma * c ;
 }
