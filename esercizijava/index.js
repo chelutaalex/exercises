@@ -696,14 +696,54 @@ function prova(string) {
     }
 }
 
-*/ 
+
 
 //esercizio 73 e 74
 
-const somma = (a, b) => {
-    return a + b;
-}
+function basicOperation(a, b, callback) {
 
-const moltiplicazione = (somma, c) => {
-    return somma * c ;
-}
+    const result = a + b;
+  
+    console.log("Risultato della somma:", result);
+  
+    callback(result);
+  }
+  
+  function myCallback(result) {
+    console.log("Callback eseguito con il risultato:", result);
+  }
+
+
+*/
+
+//es 75
+
+function firstOperation(data, callback) {
+    console.log("Eseguo la prima operazione con:", data);
+    setTimeout(() => {
+      const result = data + " -> Risultato della prima operazione";
+      console.log(result);
+      callback(result);
+    }, 1000);
+  }
+
+  function secondOperation(data, callback) {
+    console.log("Eseguo la seconda operazione con:", data);
+    setTimeout(() => {
+      const result = data + " -> Risultato della seconda operazione";
+      console.log(result);
+  
+      callback(result);
+    }, 1000);
+  }
+
+  function main() {
+    const initialData = "Inizio";
+    firstOperation(initialData, (firstResult) => {
+      secondOperation(firstResult, (secondResult) => {
+        console.log("Operazione completa con risultato:", secondResult);
+      });
+    });
+  }
+
+main();
