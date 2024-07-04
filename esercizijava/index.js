@@ -791,7 +791,7 @@ function1().then((message) => {
     console.log("azione eseguita indipendentemente dal risultato");
 }
 
-*/
+
 
 //es 79 promise chaining
 
@@ -811,3 +811,25 @@ function1()
     return risultatoFinale + 3 
 })
 console.log(risultatoFinale);
+
+*/
+
+// es 80 catena di promesse con condizioni
+
+const funzione1 = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            numeroRandom = Math.floor(Math.random() * 100);
+            resolve(numeroRandom);
+        }, 1000);
+    });
+};
+
+funzione1(numero)
+.then((numero) => {
+    if(numero % 2 === 0) {
+        return "numero pari";
+    } else {
+        return "numero Dispari";
+    }
+})
