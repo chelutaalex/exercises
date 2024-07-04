@@ -865,7 +865,7 @@ funzione1()
     console.error(error)
 })
 
-*/
+
 
 //esercizio 82
 
@@ -886,3 +886,24 @@ funzione1()
     console.error(error)
 })
 
+*/
+
+//esercizio 83
+
+const valoreBoolean = (boolean) => {
+    return new Promise((resolve, reject) => {
+        if(boolean === true) {
+            resolve(boolean);
+        } else {
+            reject(boolean);
+        }
+    })
+}
+
+valoreBoolean(true)
+.then((boolean) => {
+    console.log("Valore true");
+})
+.catch((boolean) => {
+    console.log("Valore falso");
+})
