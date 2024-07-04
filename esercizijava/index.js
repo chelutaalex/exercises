@@ -834,7 +834,7 @@ funzione1(numero)
     }
 })
 
-*/
+
 
 //esercizio 81
 
@@ -865,5 +865,24 @@ funzione1()
     console.error(error)
 })
 
+*/
 
+//esercizio 82
+
+const funzione1 = () => {
+    let num = parseInt(prompt("Inserisci un valore numerico"));
+    return new Promise((resolve, reject) => {
+    if(isNaN(num)) {
+        reject("Il valore inserito deve essere un numero");
+     } else {
+        console.log(`Il numero ${num} è un numero`)
+        resolve(num)
+     }
+    });
+}
+
+funzione1()
+.catch((error) => {
+    console.error(error)
+})
 
