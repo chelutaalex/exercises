@@ -748,7 +748,7 @@ function firstOperation(data, callback) {
 
 main();
 
-*/
+
 
 //es 76
 
@@ -761,4 +761,29 @@ function function1() {
 }
 function1().then((message) => {
     console.log(message);
+});
+
+*/
+
+//es 77
+
+function function1() {
+    return new Promise((resolve, reject) => {
+        if(false) {
+            setTimeout(() => {
+                resolve("promessa risolta dopo 2 secondi")
+            }, 2000)
+        } else {
+            setTimeout(() => {
+                reject("promessa non risolta")
+            }, 2000)
+            
+        }
+    })
+}
+function1().then((message) => {
+    console.log(message);
+})
+.catch((error) => {
+    console.error(error)
 });
