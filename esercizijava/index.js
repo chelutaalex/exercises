@@ -908,7 +908,7 @@ valoreBoolean(true)
     console.log("Valore falso");
 })
 
-*/
+
 
 //esercizio 84
 
@@ -937,4 +937,42 @@ function1()
 })
 .catch((error) => {
     console.error(error);
+})
+
+*/
+
+//esercizio 85 promise.all
+
+let primoRisultato = new Promise (function(resolve, reject) {
+    setTimeout(() => {
+        let valore = true
+        if(valore) {
+            resolve("Prima promessa risolta");
+        } else {
+            reject("Prima promessa fallita")
+        }
+    } , 2000)
+})
+
+
+let secondoRisultato = new Promise (function(resolve, reject) {
+    setTimeout(() => {
+        let valore2 = true
+        if(valore2) {
+            resolve("Seconda promessa risolta");
+        } else {
+            reject("Seconda promessa fallita")
+        }
+    } , 5000)
+})
+
+
+Promise.all([
+    primoRisultato,
+    secondoRisultato
+]) .then((valore) => {
+    console.log(valore[0], valore[1])
+})
+.catch((error) => {
+    console.error(error)
 })
