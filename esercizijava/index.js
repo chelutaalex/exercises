@@ -812,7 +812,7 @@ function1()
 })
 console.log(risultatoFinale);
 
-*/
+
 
 // es 80 catena di promesse con condizioni
 
@@ -833,3 +833,37 @@ funzione1(numero)
         return "numero Dispari";
     }
 })
+
+*/
+
+//esercizio 81
+
+const funzione1 = () => {
+    let num = parseInt(prompt("Inserisci un valore numerico"));
+    return new Promise((resolve, reject) => {
+    if(isNaN(num)) {
+        reject("Il valore inserito deve essere un numero");
+     } else {
+        console.log(`Il numero ${num} è un numero`)
+        resolve(num)
+     }
+    });
+}
+
+funzione1()
+.then ((numero) => {
+    console.log(numero)
+    let molt = numero * 2;
+    console.log(molt);
+    return molt;
+})
+.then ((numero2) => {
+    let somma = numero2 + 2;
+    console.log(somma);
+})
+.catch((error) => {
+    console.error(error)
+})
+
+
+
