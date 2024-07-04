@@ -886,7 +886,7 @@ funzione1()
     console.error(error)
 })
 
-*/
+
 
 //esercizio 83
 
@@ -906,4 +906,35 @@ valoreBoolean(true)
 })
 .catch((boolean) => {
     console.log("Valore falso");
+})
+
+*/
+
+//esercizio 84
+
+const function1 = () => {
+    return new Promise((resolve, reject) => {
+        let valore = Math.random() * 200;
+        if (valore > 100) {
+            resolve(valore);
+        } else {
+            reject(valore);
+        }
+    })
+} 
+
+function1()
+.then((valore) => {
+    if(valore > 100) {
+        console.log("valore maggiore di 100");
+    }
+    return function1();
+}) 
+.then((valore) => {
+    if(valore > 100) {
+        console.log("il secondo valore maggiore di 100");
+    }
+})
+.catch((error) => {
+    console.error(error);
 })
