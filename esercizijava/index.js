@@ -765,7 +765,7 @@ function1().then((message) => {
 
 */
 
-//es 77
+//es 77 & 78
 
 function function1() {
     return new Promise((resolve, reject) => {
@@ -786,4 +786,7 @@ function1().then((message) => {
 })
 .catch((error) => {
     console.error(error)
-});
+})
+.finally {
+    console.log("azione eseguita indipendentemente dal risultato");
+}
