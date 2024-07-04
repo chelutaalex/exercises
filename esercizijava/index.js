@@ -714,7 +714,7 @@ function basicOperation(a, b, callback) {
   }
 
 
-*/
+
 
 //es 75
 
@@ -747,3 +747,18 @@ function firstOperation(data, callback) {
   }
 
 main();
+
+*/
+
+//es 76
+
+function function1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("promise risolta dopo 2 secondi")
+        } , 2000)
+    })
+}
+function1().then((message) => {
+    console.log(message);
+});
