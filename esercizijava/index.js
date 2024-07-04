@@ -763,7 +763,7 @@ function1().then((message) => {
     console.log(message);
 });
 
-*/
+
 
 //es 77 & 78
 
@@ -790,3 +790,24 @@ function1().then((message) => {
 .finally {
     console.log("azione eseguita indipendentemente dal risultato");
 }
+
+*/
+
+//es 79 promise chaining
+
+const function1 = () => {
+    return new Promise((result) => {
+        setTimeout(() => {
+            result = resolve(Math.floor(Math.random() * 100))
+        }, 1000)
+    })
+}
+
+function1()
+.then((number) => {
+    return number * 2
+})
+.then((risultatoFinale) => {
+    return risultatoFinale + 3 
+})
+console.log(risultatoFinale);
