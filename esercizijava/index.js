@@ -939,7 +939,7 @@ function1()
     console.error(error);
 })
 
-*/
+
 
 //esercizio 85 promise.all
 
@@ -976,3 +976,31 @@ Promise.all([
 .catch((error) => {
     console.error(error)
 })
+
+*/
+
+//esercizio 86 promise.race
+
+let primaPromessa = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Prima promessa risolta")
+        }, 2000)
+    })
+}
+
+let secondaPromessa = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Seconda promessa risolta")
+        }, 4000)
+    })
+}
+
+Promise.race([primaPromessa(), secondaPromessa()]) 
+    .then((valore) => {
+        console.log(valore);
+    })
+    .catch((error) => {
+        console.error(error);
+    })
