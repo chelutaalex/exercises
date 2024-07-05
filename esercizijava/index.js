@@ -977,7 +977,7 @@ Promise.all([
     console.error(error)
 })
 
-*/
+
 
 //esercizio 86 promise.race
 
@@ -1004,3 +1004,41 @@ Promise.race([primaPromessa(), secondaPromessa()])
     .catch((error) => {
         console.error(error);
     })
+
+    */
+
+
+    //esercizio 87
+    let primaPromessa = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Prima promessa risolta")
+            }, 2000)
+        })
+    }
+    
+    let secondaPromessa = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Seconda promessa risolta")
+            }, 4000)
+        })
+    }
+
+    let terzaPromessa = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("Terza promessa rifiuttata")
+            }, 4000)
+        })
+    }
+
+    const promesse = [primaPromessa, secondaPromessa, terzaPromessa];
+
+    Promise.allSettled(promesse) 
+        .then((results) => {
+            results.forEach((result) => console.log(result.status))
+        })
+        .catch((error) => {
+            console.error(error);
+        })
