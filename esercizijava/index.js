@@ -1005,7 +1005,7 @@ Promise.race([primaPromessa(), secondaPromessa()])
         console.error(error);
     })
 
-    */
+
 
 
     //esercizio 87
@@ -1042,3 +1042,26 @@ Promise.race([primaPromessa(), secondaPromessa()])
         .catch((error) => {
             console.error(error);
         })
+
+    */
+
+//eserecizio  88
+
+let primaPromessa = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Prima promessa risolta")
+        }, 2000)
+    })
+}
+
+async function f1() {
+    try {
+    const x = await primaPromessa();
+    console.log(x);
+    } catch(error) {
+        console.error(error); 
+    }  
+}
+
+f1();
