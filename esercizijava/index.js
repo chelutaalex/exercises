@@ -1043,7 +1043,7 @@ Promise.race([primaPromessa(), secondaPromessa()])
             console.error(error);
         })
 
-    */
+
 
 //eserecizio  88
 
@@ -1065,3 +1065,27 @@ async function f1() {
 }
 
 f1();
+
+    */
+
+//esercizio 89
+
+let primaPromessa = () => {
+    return new Promise((resolve, reject) => {
+        let x = true;
+        if(x === true) {
+            resolve("Promessa risolta")
+        } else {
+            reject("Promessa fallita")
+        }
+    })
+}
+
+async function f1() {
+    try {
+    const x = await primaPromessa();
+    console.log(x);
+    } catch(error) {
+        console.error(error); 
+    }  
+}
