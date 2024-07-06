@@ -1066,7 +1066,7 @@ async function f1() {
 
 f1();
 
-    */
+    
 
 //esercizio 89
 
@@ -1085,6 +1085,36 @@ async function f1() {
     try {
     const x = await primaPromessa();
     console.log(x);
+    } catch(error) {
+        console.error(error); 
+    }  
+}
+
+*/
+
+// es 90
+
+let primaPromessa = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Prima promessa risolta")
+        }, 2000)
+    })
+}
+
+let secondaPromessa = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Seconda promessa risolta")
+        }, 4000)
+    })
+}
+
+async function funzioneAsincrona() {
+    try {
+    const x = await primaPromessa();
+    const y = await secondaPromessa();
+    console.log(x , y);
     } catch(error) {
         console.error(error); 
     }  
