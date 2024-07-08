@@ -1143,7 +1143,7 @@ fetch("http://www.google.it")
 .then(data => console.log(data))
 .catch((error) => console.error('Errore:', error));
 
-   */
+  
 
 //es 93
 
@@ -1157,3 +1157,23 @@ async function funzioneAsincrona() {
         console.error(error); 
     }  
 }
+ */
+
+//esercizio 94 cors
+
+const fetchData = async () => {
+    try {
+        const response = await fetch('https://api.github.com/users/octocat');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Dati ricevuti:', data);
+    } catch (error) {
+        console.error('Si è verificato un errore durante la richiesta:', error.message);
+    }
+};
+
+fetchData();
