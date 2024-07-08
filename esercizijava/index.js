@@ -1120,8 +1120,6 @@ async function funzioneAsincrona() {
     }  
 }
 
-*/
-
 //es 91 GET semplice
 
 fetch("http://www.google.it")
@@ -1129,3 +1127,18 @@ fetch("http://www.google.it")
       console.log(response);
    })
    .catch(error => console.log("Si è verificato un errore!"))
+
+   */
+
+   //es 92 post
+
+   fetch("https://example.com/api/data", {
+    method: "POST",
+    body: JSON.stringify({
+        nome: "Mario",
+        eta: 30
+    })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch((error) => console.error('Errore:', error));
