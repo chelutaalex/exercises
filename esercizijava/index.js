@@ -1128,7 +1128,7 @@ fetch("http://www.google.it")
    })
    .catch(error => console.log("Si è verificato un errore!"))
 
-   */
+
 
    //es 92 post
 
@@ -1142,3 +1142,18 @@ fetch("http://www.google.it")
 .then(response => response.json())
 .then(data => console.log(data))
 .catch((error) => console.error('Errore:', error));
+
+   */
+
+//es 93
+
+async function funzioneAsincrona() {
+    try {
+        fetch("http://www.google.it")
+        .then(response => {
+           console.log(response);
+        })
+    } catch(error) {
+        console.error(error); 
+    }  
+}
