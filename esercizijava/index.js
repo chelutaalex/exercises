@@ -1090,7 +1090,7 @@ async function f1() {
     }  
 }
 
-*/
+
 
 // es 90
 
@@ -1119,3 +1119,13 @@ async function funzioneAsincrona() {
         console.error(error); 
     }  
 }
+
+*/
+
+//es 91 GET semplice
+
+fetch("http://www.google.it")
+   .then(response => {
+      console.log(response);
+   })
+   .catch(error => console.log("Si è verificato un errore!"))
