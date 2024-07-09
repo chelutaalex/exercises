@@ -1216,7 +1216,7 @@ const fetchData = async () => {
 
 fetchData();
 
-*/
+
 
 //es 97 cookies
 
@@ -1230,3 +1230,18 @@ function cookieProva(name, value) {
 cookieProva("nome del cookie", "valore del cookie");
 
 console.log("Cookies", document.cookie)
+
+*/
+
+//es 98 local storage
+
+
+
+function cookieProva(name) {
+    name = prompt("Come ti chiami")
+    const data = new Date();
+    data.setTime(data.getTime() + 24*60*60*1000);
+    localStorage.setItem("il mio nome", name);
+}
+
+cookieProva()
