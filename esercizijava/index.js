@@ -1157,7 +1157,7 @@ async function funzioneAsincrona() {
         console.error(error); 
     }  
 }
- */
+ 
 
 //esercizio 94 cors
 
@@ -1177,3 +1177,21 @@ const fetchData = async () => {
 };
 
 fetchData();
+
+*/
+
+//es 95
+
+var http = require("http");
+
+var options = {
+  host: "proxy",
+  port: 8080,
+  path: "http://www.google.it",
+  headers: {
+    Host: "www.google.it"
+  }
+};
+http.get(options, function(res) {
+  console.log(res);
+});
