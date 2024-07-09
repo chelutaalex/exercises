@@ -1178,7 +1178,7 @@ const fetchData = async () => {
 
 fetchData();
 
-*/
+
 
 //es 95
 
@@ -1195,3 +1195,23 @@ var options = {
 http.get(options, function(res) {
   console.log(res);
 });
+
+*/
+
+//es 96
+const fetchData = async () => {
+    try {
+        const response = await fetch('https://google.it');
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Dati ricevuti:', data);
+    } catch (error) {
+        console.error('Si è verificato un errore durante la richiesta:', error.message);
+    }
+};
+
+fetchData();
