@@ -1196,7 +1196,7 @@ http.get(options, function(res) {
   console.log(res);
 });
 
-*/
+
 
 //es 96
 const fetchData = async () => {
@@ -1215,3 +1215,18 @@ const fetchData = async () => {
 };
 
 fetchData();
+
+*/
+
+//es 97 cookies
+
+function cookieProva(name, value) {
+    const data = new Date();
+    data.setTime(data.getTime() + 24*60*60*1000);
+    let scadenza = "scadenza=" + data.toUTCString();
+    document.cookie = name + "=" + value + "; " + scadenza + "; path=/";
+}
+
+cookieProva("nome del cookie", "valore del cookie");
+
+console.log("Cookies", document.cookie)
