@@ -1246,13 +1246,27 @@ function cookieProva(name) {
 
 cookieProva()
 
-*/
+
 
 //es 99 session storage
 
 function sessionCookie(name) {
     cognome = "Cheluta"
-    sessionStorage.setItem("il mio nome", name);
+    sessionStorage.setItem("il mio nome", cognome);
 }
 
 sessionCookie()
+*/
+
+//es 100
+
+function cookieProva() {
+    let name = "Alex"
+    let cognome = "Cheluta"
+    const data = new Date();
+    data.setTime(data.getTime() + 24*60*60*1000);
+    localStorage.setItem("il mio nome", name);
+    sessionStorage.setItem("il mio nome", cognome);
+}
+
+cookieProva()
