@@ -1311,9 +1311,9 @@ let paragrafo = document.querySelector("#testo")
 paragrafo.innerHTML = "<button>Click here</button>"
 */
 
-//esercizio 107
+//esercizio 107 e 108
 let lista = document.createElement("ul")
-let elementiLista = ["item1","item2","item3"]
+let elementiLista = ["item1","item2","item3","item4","item5"]
 elementiLista.forEach(element => {
     let item = document.createElement("li")
     item.innerText = element
