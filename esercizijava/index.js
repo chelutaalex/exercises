@@ -1277,9 +1277,15 @@ cookieProva()
 
 console.log("Il DOM di questa pagina è: ", document)
 
-*/
+
 
 //es 102
 
 let paragrafo = document.getElementById("testo");
+console.log(paragrafo)
+
+*/
+//es 103
+
+let paragrafo = document.querySelector("#testo")
 console.log(paragrafo)
