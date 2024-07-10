@@ -1304,8 +1304,20 @@ let paragrafo = document.querySelector("#testo")
 paragrafo.style.backgroundColor = "red"
 paragrafo.style.fontSize = "70px"
 
-*/
+
 //es 106
 
 let paragrafo = document.querySelector("#testo")
 paragrafo.innerHTML = "<button>Click here</button>"
+*/
+
+//esercizio 107
+let lista = document.createElement("ul")
+let elementiLista = ["item1","item2","item3"]
+elementiLista.forEach(element => {
+    let item = document.createElement("li")
+    item.innerText = element
+    lista.appendChild(item)
+});
+
+document.body.appendChild(lista);
