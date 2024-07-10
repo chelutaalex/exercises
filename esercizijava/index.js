@@ -1256,7 +1256,7 @@ function sessionCookie(name) {
 }
 
 sessionCookie()
-*/
+
 
 //es 100
 
@@ -1270,3 +1270,9 @@ function cookieProva() {
 }
 
 cookieProva()
+
+*/
+
+//es 101 dom 
+
+console.log("Il DOM di questa pagina è: ", document)
