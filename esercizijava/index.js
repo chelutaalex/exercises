@@ -1309,7 +1309,7 @@ paragrafo.style.fontSize = "70px"
 
 let paragrafo = document.querySelector("#testo")
 paragrafo.innerHTML = "<button>Click here</button>"
-*/
+
 
 //esercizio 107 e 108
 let lista = document.createElement("ul")
@@ -1321,3 +1321,27 @@ elementiLista.forEach(element => {
 });
 
 document.body.appendChild(lista);
+*/
+
+//esercizio 109 form
+
+    const form = document.getElementById('idForm');
+
+    form.addEventListener("submit", (event) => {
+        
+        event.preventDefault();
+
+        
+        const name = document.getElementById('nome').value.trim();
+        const email = document.getElementById('cognome').value.trim();
+
+        
+        if (name === '' || email === '') {
+           
+            alert('Bisogna inserire nome e cognome');
+        } else {
+            // Se tutti i campi sono compilati, invia il form
+            alert('Il form è stato inviato')
+        }
+    });
+
