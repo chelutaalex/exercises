@@ -1271,8 +1271,15 @@ function cookieProva() {
 
 cookieProva()
 
-*/
+
 
 //es 101 dom 
 
 console.log("Il DOM di questa pagina è: ", document)
+
+*/
+
+//es 102
+
+let paragrafo = document.getElementById("testo");
+console.log(paragrafo)
