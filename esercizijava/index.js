@@ -1231,7 +1231,7 @@ cookieProva("nome del cookie", "valore del cookie");
 
 console.log("Cookies", document.cookie)
 
-*/
+
 
 //es 98 local storage
 
@@ -1245,3 +1245,14 @@ function cookieProva(name) {
 }
 
 cookieProva()
+
+*/
+
+//es 99 session storage
+
+function sessionCookie(name) {
+    cognome = "Cheluta"
+    sessionStorage.setItem("il mio nome", name);
+}
+
+sessionCookie()
