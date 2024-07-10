@@ -1290,9 +1290,16 @@ console.log(paragrafo)
 let paragrafo = document.querySelector("#testo")
 console.log(paragrafo)
 
-*/
+
 
 //es 104 innertext
 
 let paragrafo = document.querySelector("#testo")
 paragrafo.innerText = "Ciao Mondo"
+
+*/
+//es 105
+
+let paragrafo = document.querySelector("#testo")
+paragrafo.style.backgroundColor = "red"
+paragrafo.style.fontSize = "70px"
