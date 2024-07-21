@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+          darkMode: 'class',
           theme: {
             extend: {
               colors: {
@@ -31,7 +33,7 @@
 </head>
 <body>
 
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 bg-gray-400 dark:bg-gray-900 ">
         <h1 class="sans hover:serif text-center marginStandard paddingStandard text-pink" >Hello World</h1>
         <p class="serif bg-blue-800 text-xl text-orange">Lorem ipsum dolor sit amet consectetur.</p>
         <button class="font-mono paddingStandard">Click here</button>
@@ -41,6 +43,20 @@
         <button class="bg-pink border-orange border-4">pink</button>
         <button class="bg-orange border-purple border-4">orange</button>
     </div>
+
+    <div className="p-6">
+      <button 
+        id="darkModeToggle" 
+        onClick={toggleDarkMode} 
+        className="bg-blue-500 text-white p-2 rounded mb-4"
+      >
+        Toggle Dark Mode
+      </button>
+      <p id="darkNodeStatus">
+        {darkMode ? 'Active' : 'Inactive'}
+      </p>
+    </div>
     
+    <script src="index.js"></script>
 </body>
 </html>
