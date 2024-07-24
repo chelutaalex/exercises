@@ -1,7 +1,11 @@
+import { useEffect, useState } from "react"
+
 const Counter = () => {
+const [count,setCount] = useState(0);
+
     return (
         <div>
-            Count:0
+            Count:{count}
         </div>
     )
 
