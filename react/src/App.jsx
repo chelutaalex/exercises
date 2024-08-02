@@ -10,14 +10,7 @@ function App() {
 
   return (
     <>
-     <Card>
-        <h2>Hello</h2>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </Card>
-      <Card>
-        <h2>Hello</h2>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </Card>
+      
     </>
   )
 }
