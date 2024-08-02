@@ -1,11 +1,13 @@
+import { useRef } from "react";
 
 
 const UncontrolledInput = () => {
 
+    const ref = useRef();
 
     return(
         <>
-            <input type="text" />
+            <input ref = {ref} />
         </>
     )
 }
