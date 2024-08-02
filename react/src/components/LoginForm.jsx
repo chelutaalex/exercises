@@ -12,13 +12,19 @@ const LoginForm = () => {
         setPassword(event.target.value);
     }
 
+    const handleSubmit = () => {
+        alert(username);
+        alert(password);
+    }
+
 
     return(
         <>
             <p>Insert username</p>
             <input onChange={handleInsertUsername}></input>
             <p>Insert password</p>
-            <input onChange={handleInsertPassword}></input>
+            <input onChange={handleInsertPassword}></input><br />
+            <button onClick={handleSubmit}>Submit</button>
         
         </>
 
