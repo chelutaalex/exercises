@@ -7,8 +7,8 @@ const ItemList = ({macchine}) => {
         <>
             <ul>
                 {
-                    macchine.map((car, index) => (
-                        <li key={index}>{car}</li>
+                    macchine.map((macchina, index) => (
+                        <li key={index}>{macchina}</li>
                     ))
                 }
             </ul>
