@@ -1,21 +1,25 @@
 import useFetch from "../hooks/useFetch.jsx";
-import useFilteredTodos from "../hooks/useFilteredTodos.jsx";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 
 const TodoList = () => {
     const url = "https://jsonplaceholder.typicode.com/todos";
     const { data, loading, error } = useFetch(url);
 
     const [searchTerm, setSearchTerm] = useState("");
-    const filteredTodos = useFilteredTodos(data || [], searchTerm); 
 
     const handleSearchChange = useCallback((e) => {
         setSearchTerm(e.target.value);
-    }, []); 
+    }, []);
+
+    const filteredTodos = useMemo(() => {
+        return (data || []).filter(todo =>
+            todo.title.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    }, [data, searchTerm]);
 
     if (loading) {
         return <div>Loading...</div>;
-    } 
+    }
 
     if (error) {
         return <div>{error.message}</div>;
@@ -27,7 +31,7 @@ const TodoList = () => {
                 type="text"
                 placeholder="Cerca to-do..."
                 value={searchTerm}
-                onChange={handleSearchChange} 
+                onChange={handleSearchChange}
             />
             <ul>
                 {filteredTodos.map(todo => (
