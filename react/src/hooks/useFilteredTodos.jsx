@@ -4,8 +4,9 @@ function useFilteredTodos(todos, searchTerm) {
   const [filteredTodos, setFilteredTodos] = useState([]);
 
   useEffect(() => {
+  
     const filtered = todos.filter(todo =>
-      todo.toLowerCase().includes(searchTerm.toLowerCase())
+      todo.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     setFilteredTodos(filtered);
