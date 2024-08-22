@@ -1,14 +1,15 @@
-import { useState, useCallback, useMemo, useRef, useEffect } from "react";
-import useFetch from "../hooks/useFetch.jsx";
-import useFilteredTodos from "../hooks/useFilteredTodos";
+import React, { useState, useCallback, useMemo, useRef, useEffect, useContext } from "react";
+import { TodoContext } from "../context/TodoContext.jsx";
+import useFilteredTodos from "../hooks/useFilteredTodos.jsx";
 
 const TodoList = () => {
-    const url = "https://jsonplaceholder.typicode.com/todos";
-    const { data, loading, error } = useFetch(url);
+    const { todos, loading, error } = useContext(TodoContext);  // Accesso ai dati tramite il contesto
     const [searchTerm, setSearchTerm] = useState("");
 
+    // Riferimento per l'input di ricerca
     const searchInputRef = useRef(null);
 
+    // Imposta il focus sull'input di ricerca quando il componente viene montato
     useEffect(() => {
         if (searchInputRef.current) {
             searchInputRef.current.focus();
@@ -19,7 +20,8 @@ const TodoList = () => {
         setSearchTerm(e.target.value);
     }, []);
 
-    const filteredTodos = useFilteredTodos(data || [], searchTerm);
+    // Usa l'hook personalizzato per filtrare i to-do
+    const filteredTodos = useFilteredTodos(todos, searchTerm);
 
     if (loading) {
         return <div>Loading...</div>;
@@ -36,7 +38,7 @@ const TodoList = () => {
                 placeholder="Cerca to-do..."
                 value={searchTerm}
                 onChange={handleSearchChange}
-                ref={searchInputRef} 
+                ref={searchInputRef}  // Associa il riferimento all'input
             />
             <ul>
                 {filteredTodos.map(todo => (

@@ -6,14 +6,15 @@ import UncontrolledInput from "./components/UncontrolledInput.jsx"
 import ItemList from "./components/ItemList.jsx"
 import Card from "./Card.jsx"
 import TodoList from "./components/TodoList.jsx"
+import { TodoProvider } from './context/TodoContext.jsx';
 
 function App() {
 
   return (
-    <>
-      <TodoList />
-    </>
-  )
+      <TodoProvider>
+          <TodoList />
+      </TodoProvider>
+        );
 }
 
 export default App
