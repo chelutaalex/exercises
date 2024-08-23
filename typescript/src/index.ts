@@ -1,5 +1,6 @@
 import {Todo} from "./types"
 import {User} from "./types"
+import { Project } from "./types";
 
 let todos: Todo[] = [];
 
@@ -56,8 +57,31 @@ function getTodoSummary(todo:Todo):[string,boolean] {
     return[todo.title,todo.completed]
 }
 
+function createProject(id: number, name: string, users: User[], todos: Todo[]): Project {
+  
+    const project: Project = {
+        id: id,
+        name: name,
+        users: users,
+        todos: todos
+    };
+    
+    return project; 
+}
+
 const todoTest:Todo = {id:40,title:"Test",completed:false,metadata:"High priority"}
 const updateTodo1 = updateTodo(todoTest,{completed:true})
 const userTest:User = {id:50,name:"Marco",todos:[{id:40,title:"Test",completed:false,metadata:"High priority"}]}
+const usersTest: User[] = [
+    { id: 1, name: 'Marco' },
+    { id: 2, name: 'Luca' }
+];
 
-console.log(getTodoSummary(todoTest))
+const todosTest: Todo[] = [
+    { id: 1, title: 'Fare i compiti', completed: false },
+    { id: 2, title: 'Cucinare', completed: true }
+];
+
+const myProject = createProject(1, "test del project", usersTest, todosTest);
+
+console.log(myProject);
