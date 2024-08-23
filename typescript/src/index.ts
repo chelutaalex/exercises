@@ -52,8 +52,12 @@ function parseInput(input:unknown) {
     }
 }
 
+function getTodoSummary(todo:Todo):[string,boolean] {
+    return[todo.title,todo.completed]
+}
+
 const todoTest:Todo = {id:40,title:"Test",completed:false,metadata:"High priority"}
 const updateTodo1 = updateTodo(todoTest,{completed:true})
 const userTest:User = {id:50,name:"Marco",todos:[{id:40,title:"Test",completed:false,metadata:"High priority"}]}
 
-console.log(userTest)
+console.log(getTodoSummary(todoTest))
