@@ -19,6 +19,10 @@ function addTodo(title:string,metadata:string|object) {
     todos.push(todo)
 }
 
+function updateTodo(todo:Todo, updates:Partial<Todo>) {
+    return {...todo,...updates}
+}
+
 function assignTodoToUser(todoId: number, userId: number): void {
     const todo = todos.find(t => t.id === todoId);
     
@@ -47,5 +51,10 @@ function parseInput(input:unknown) {
         return error("Il tipo di dato non corrisponde");
     }
 }
+
+const todoTest:Todo = {id:40,title:"Test",completed:false,metadata:"High priority"}
+const updateTodo1 = updateTodo(todoTest,{completed:true})
+
+console.log(updateTodo1)
 
 console.log(parseInput(4))
