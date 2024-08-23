@@ -30,9 +30,17 @@ function assignTodoToUser(todoId: number, userId: number): void {
     }
 }
 
+function getUserTodos(userId:number): Todo[] {
+    return todos.filter(todo => todo.userId ===userId)
+}
+
 addTodo("lavare i piatti")
 addTodo("Portare fuori il cane")
 
 assignTodoToUser(1,2)
+assignTodoToUser(2,2)
 
+const user2 = getUserTodos(2)
+
+console.log(user2)
 console.log(todos)
