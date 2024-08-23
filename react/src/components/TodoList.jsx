@@ -3,13 +3,11 @@ import { TodoContext } from "../context/TodoContext.jsx";
 import useFilteredTodos from "../hooks/useFilteredTodos.jsx";
 
 const TodoList = () => {
-    const { todos, loading, error } = useContext(TodoContext);  // Accesso ai dati tramite il contesto
+    const { todos, loading, error } = useContext(TodoContext);
     const [searchTerm, setSearchTerm] = useState("");
 
-    // Riferimento per l'input di ricerca
     const searchInputRef = useRef(null);
 
-    // Imposta il focus sull'input di ricerca quando il componente viene montato
     useEffect(() => {
         if (searchInputRef.current) {
             searchInputRef.current.focus();
@@ -20,7 +18,6 @@ const TodoList = () => {
         setSearchTerm(e.target.value);
     }, []);
 
-    // Usa l'hook personalizzato per filtrare i to-do
     const filteredTodos = useFilteredTodos(todos, searchTerm);
 
     if (loading) {
@@ -38,7 +35,7 @@ const TodoList = () => {
                 placeholder="Cerca to-do..."
                 value={searchTerm}
                 onChange={handleSearchChange}
-                ref={searchInputRef}  // Associa il riferimento all'input
+                ref={searchInputRef} 
             />
             <ul>
                 {filteredTodos.map(todo => (
