@@ -54,7 +54,6 @@ function parseInput(input:unknown) {
 
 const todoTest:Todo = {id:40,title:"Test",completed:false,metadata:"High priority"}
 const updateTodo1 = updateTodo(todoTest,{completed:true})
+const userTest:User = {id:50,name:"Marco",todos:[{id:40,title:"Test",completed:false,metadata:"High priority"}]}
 
-console.log(updateTodo1)
-
-console.log(parseInput(4))
+console.log(userTest)
