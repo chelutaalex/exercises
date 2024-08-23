@@ -38,13 +38,14 @@ function error(message:string): never {
     throw new Error(message)
 }
 
-addTodo("lavare i piatti")
-addTodo("Portare fuori il cane")
+function parseInput(input:unknown) {
+    if(typeof input === "string") {
+        return input;
+    } else if(typeof input === "number") {
+        return input.toString();
+    } else {
+        return error("Il tipo di dato non corrisponde");
+    }
+}
 
-assignTodoToUser(1,2)
-assignTodoToUser(2,2)
-
-const user2 = getUserTodos(2)
-
-console.log(user2)
-console.log(todos)
+console.log(parseInput(4))
