@@ -8,12 +8,13 @@ let users: User[] = [
     { id: 2, name: 'Luca' }
 ];
 
-function addTodo(title:string) {
+function addTodo(title:string, metadata:any) {
     
     const todo:Todo= {
         id:todos.length + 1,
         title:title,
-        completed:false
+        completed:false,
+        metadata:metadata
     }
     
     todos.push(todo)
