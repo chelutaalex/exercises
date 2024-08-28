@@ -1,4 +1,4 @@
-import {Todo, Project, UserInterface, TodoStatus} from "./types"
+import {Todo, Project, UserInterface, TodoStatus, TodoRecord} from "./types"
 import { User } from "./User";
 import { filterTodos, PartialTodo } from "./utils";
 
@@ -112,3 +112,13 @@ export function updatePartialTodo(todoId: number, updates: PartialTodo): Todo | 
     }
 }
 
+function convertArrayToRecord(todos: Todo[]): TodoRecord {
+    return todos.reduce((record, todo) => {
+        record[todo.id] = todo;
+        return record;
+    }, {} as TodoRecord);
+}
+
+const todoRecord = convertArrayToRecord(todosTest);
+
+console.log(todoRecord);

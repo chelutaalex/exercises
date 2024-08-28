@@ -30,3 +30,5 @@ export enum TodoStatus {
     InProgress = "IN_PROGRESS",
     Completed = "COMPLETED",
 }
+
+export type TodoRecord = Record<number, Todo>;
