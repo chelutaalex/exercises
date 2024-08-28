@@ -7,7 +7,7 @@ export interface Todo {
     status?: TodoStatus
 }
 
-export interface User {
+export interface UserInterface {
     id:number,
     name:string,
     email?:string,
