@@ -1,6 +1,4 @@
-import {Todo} from "./types"
-import {User} from "./types"
-import { Project } from "./types";
+import {Todo, Project, User, TodoStatus} from "./types"
 
 let todos: Todo[] = [];
 
@@ -15,6 +13,7 @@ function addTodo(title:string,metadata:string|object) {
         id:todos.length + 1,
         title:title,
         completed:false,
+        status:TodoStatus.InProgress
     }
     
     todos.push(todo)
