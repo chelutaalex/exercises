@@ -83,4 +83,15 @@ const todosTest: Todo[] = [
 
 const myProject = createProject(1, "test del project", usersTest, todosTest);
 
+const updateTodoStatus = (todoId:number, status:TodoStatus) => {
+    const todo = todosTest.find(t => {
+        return t.id == todoId;
+    })
+    if(!todo) {
+        throw new Error("todo not find");
+    } 
+
+    todo.status = status;
+}
+
 console.log(myProject);
