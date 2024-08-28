@@ -1,5 +1,6 @@
 import {Todo, Project, UserInterface, TodoStatus} from "./types"
 import { User } from "./User";
+import { filterTodos, PartialTodo } from "./utils";
 
 let todos: Todo[] = [];
 
@@ -98,3 +99,16 @@ const todo3: Todo = { id: 3, title: "Pulire casa", completed: false, status: Tod
 user1.addTodo(todo1);
 user1.addTodo(todo2);
 user2.addTodo(todo3);
+
+export function updatePartialTodo(todoId: number, updates: PartialTodo): Todo | undefined {
+    const todo = todos.find(t => t.id === todoId);
+
+    if (todo) {
+        Object.assign(todo, updates);
+        return todo;
+    } else {
+        console.error(`Todo con id ${todoId} non trovato`);
+        return undefined;
+    }
+}
+
