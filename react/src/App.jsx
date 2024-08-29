@@ -13,6 +13,7 @@ import Home from './pages/Home.jsx'
 import About from "./pages/About.jsx"
 import Navbar from './components/Navbar.jsx'
 import Layout from "./components/Layout.jsx"
+import TodoDetail from "./pages/TodoDetail.jsx"
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="todos/:id" element={<TodoDetail />} />
         </Route>
       </Routes>
     </TodoProvider>
