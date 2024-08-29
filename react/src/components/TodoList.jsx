@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useMemo, useRef, useEffect, useContext } from "react";
 import { TodoContext } from "../context/TodoContext.jsx";
 import useFilteredTodos from "../hooks/useFilteredTodos.jsx";
+import { Link } from "react-router-dom";
 
 const TodoList = () => {
     const { todos, loading, error } = useContext(TodoContext);
@@ -35,15 +36,17 @@ const TodoList = () => {
                 placeholder="Cerca to-do..."
                 value={searchTerm}
                 onChange={handleSearchChange}
-                ref={searchInputRef} 
+                ref={searchInputRef}
             />
             <ul>
                 {filteredTodos.map(todo => (
                     <li key={todo.id}>
-                        id: {todo.id}<br />
-                        title: {todo.title}<br /> 
-                        status: {todo.completed ? '(Completato)' : '(Incompleto)'}<br />
-                        user id: {todo.userId}<br />
+                        <Link to={`/todos/${todo.id}`}>
+                            id: {todo.id}<br />
+                            title: {todo.title}<br />
+                            status: {todo.completed ? '(Completato)' : '(Incompleto)'}<br />
+                            user id: {todo.userId}<br />
+                        </Link>
                     </li>
                 ))}
             </ul>
