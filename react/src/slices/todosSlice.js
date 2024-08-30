@@ -25,6 +25,13 @@ const todosSlice = createSlice({
     removeTodo: (state, action) => {
       state.items = state.items.filter(todo => todo.id !== action.payload);
     },
+
+    toggleComplete: (state, action) => {
+      const todo = state.items.find(todo => todo.id === action.payload);
+      if (todo) {
+        todo.completed = !todo.completed;
+      }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -43,6 +50,6 @@ const todosSlice = createSlice({
   },
 });
 
-export const { addTodo, removeTodo } = todosSlice.actions;
+export const { addTodo, removeTodo, toggleComplete } = todosSlice.actions;
 
 export default todosSlice.reducer;

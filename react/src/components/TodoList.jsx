@@ -1,16 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useSearchParams } from "react-router-dom";
-import { fetchTodos } from "../slices/todosSlice"; 
+import { fetchTodos, toggleComplete } from "../slices/todosSlice";
 
 const TodoList = () => {
-    const dispatch = useDispatch(); 
+    const dispatch = useDispatch();
     const todos = useSelector((state) => state.todos.items);
-    const loading = useSelector((state) => state.todos.loading); 
-    const error = useSelector((state) => state.todos.error); 
+    const loading = useSelector((state) => state.todos.loading);
+    const error = useSelector((state) => state.todos.error);
 
-    const [searchParams, setSearchParams] = useSearchParams(); 
-    const searchTerm = searchParams.get('search') || ""; 
+    const [searchParams, setSearchParams] = useSearchParams();
+    const searchTerm = searchParams.get('search') || "";
 
     const searchInputRef = useRef(null);
 
@@ -21,7 +21,7 @@ const TodoList = () => {
     }, []);
 
     useEffect(() => {
-        dispatch(fetchTodos()); 
+        dispatch(fetchTodos());
     }, [dispatch]);
 
     const filteredTodos = todos.filter(todo => 
@@ -31,6 +31,10 @@ const TodoList = () => {
     const handleSearchChange = (e) => {
         const value = e.target.value;
         setSearchParams(value ? { search: value } : {});
+    };
+
+    const handleToggleComplete = (id) => {
+        dispatch(toggleComplete(id));
     };
 
     if (loading) {
@@ -59,6 +63,9 @@ const TodoList = () => {
                             status: {todo.completed ? '(Completato)' : '(Incompleto)'}<br />
                             user id: {todo.userId}<br />
                         </Link>
+                        <button onClick={() => handleToggleComplete(todo.id)}>
+                            {todo.completed ? 'Mark as Incomplete' : 'Mark as Complete'}
+                        </button>
                     </li>
                 ))}
             </ul>
