@@ -5,8 +5,13 @@ import './index.css'
 
 import {BrowserRouter} from 'react-router-dom'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+import { Provider } from 'react-redux';
+import store from './store';
+import App from './App';
+
+ReactDOM.render(
+  <Provider store={store}>
     <App />
-  </BrowserRouter>
-)
+  </Provider>,
+  document.getElementById('root')
+);

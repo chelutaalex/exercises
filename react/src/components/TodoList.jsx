@@ -1,12 +1,15 @@
-import React, { useEffect, useRef, useContext, useCallback } from "react";
-import { TodoContext } from "../context/TodoContext.jsx";
-import useFilteredTodos from "../hooks/useFilteredTodos.jsx";
+import React, { useEffect, useRef } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Link, useSearchParams } from "react-router-dom";
+import { fetchTodos } from "../slices/todosSlice"; 
 
 const TodoList = () => {
-    const { todos, loading, error } = useContext(TodoContext);
-    const [searchParams, setSearchParams] = useSearchParams();
+    const dispatch = useDispatch(); 
+    const todos = useSelector((state) => state.todos.items);
+    const loading = useSelector((state) => state.todos.loading); 
+    const error = useSelector((state) => state.todos.error); 
 
+    const [searchParams, setSearchParams] = useSearchParams(); 
     const searchTerm = searchParams.get('search') || ""; 
 
     const searchInputRef = useRef(null);
@@ -17,19 +20,25 @@ const TodoList = () => {
         }
     }, []);
 
-    const handleSearchChange = useCallback((e) => {
-        const value = e.target.value;
-        setSearchParams(value ? { search: value } : {}); 
-    }, [setSearchParams]);
+    useEffect(() => {
+        dispatch(fetchTodos()); 
+    }, [dispatch]);
 
-    const filteredTodos = useFilteredTodos(todos, searchTerm);
+    const filteredTodos = todos.filter(todo => 
+        todo.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    const handleSearchChange = (e) => {
+        const value = e.target.value;
+        setSearchParams(value ? { search: value } : {});
+    };
 
     if (loading) {
         return <div>Loading...</div>;
     }
 
     if (error) {
-        return <div>{error.message}</div>;
+        return <div>{error}</div>;
     }
 
     return (
@@ -55,6 +64,6 @@ const TodoList = () => {
             </ul>
         </>
     );
-}
+};
 
 export default TodoList;
