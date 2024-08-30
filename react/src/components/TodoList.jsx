@@ -1,11 +1,13 @@
-import React, { useState, useCallback, useMemo, useRef, useEffect, useContext } from "react";
+import React, { useEffect, useRef, useContext, useCallback } from "react";
 import { TodoContext } from "../context/TodoContext.jsx";
 import useFilteredTodos from "../hooks/useFilteredTodos.jsx";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const TodoList = () => {
     const { todos, loading, error } = useContext(TodoContext);
-    const [searchTerm, setSearchTerm] = useState("");
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const searchTerm = searchParams.get('search') || ""; 
 
     const searchInputRef = useRef(null);
 
@@ -16,8 +18,9 @@ const TodoList = () => {
     }, []);
 
     const handleSearchChange = useCallback((e) => {
-        setSearchTerm(e.target.value);
-    }, []);
+        const value = e.target.value;
+        setSearchParams(value ? { search: value } : {}); 
+    }, [setSearchParams]);
 
     const filteredTodos = useFilteredTodos(todos, searchTerm);
 
